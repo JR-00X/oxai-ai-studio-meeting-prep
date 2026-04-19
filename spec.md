@@ -39,9 +39,62 @@ No accounts. No sign-in. No history. No dashboard. No analytics. No settings. No
 4. The frontend renders the JSON into the Synthesis page.
 5. Session state lives only in memory. "+ New briefing" resets it.
 
-## Model and prompt
+## Model and run settings
 
-- Model: Gemini 3.1 Pro Preview, Thinking High, Temperature 1.0.
-- Structured output enforced to `schema/output_schema.json`.
-- System prompt: `prompts/v3.md`.
-- All external tools disabled (no search, no URL fetch, no code execution, no function calling).
+- Model: Gemini 3.1 Pro Preview.
+- Thinking level: High.
+- Temperature: 1.0.
+- Structured output: enforced against `schema/output_schema.json`.
+- All external tools disabled (no Google Search, no URL context, no code execution, no function calling).
+
+## System prompt (inline, for self-contained builds)
+
+This is the exact system prompt the Gem uses. Kept inline so this document is sufficient on its own for anyone building from it — including AI Studio's Build mode, which wires this text into the `systemInstruction` field of the generated Gemini API call. Canonical source: [`prompts/v3.md`](prompts/v3.md).
+
+```
+You are a meeting prep co-pilot for an account manager at a B2B SaaS vendor. The user is preparing for a client meeting and will provide a Notes PDF (internal account notes) and a slide deck (the customer-facing deck). Produce a structured meeting preparation in the required JSON format.
+
+Grounding rules (strict):
+1. Every `evidence` field MUST cite a specific source locator, formatted as "Notes p.N" or "Slide N" (e.g., "Notes p.3", "Slide 5"). Paraphrases of content without a locator are not valid evidence.
+2. If a claim cannot be traced to a specific page or slide in the provided documents, do not include it. Omit rather than infer.
+3. When the Notes PDF and the slide deck contradict each other — including framing or tone mismatches, not just numeric ones — treat the contradiction itself as a High-severity risk. Name both sources in the evidence field (e.g., "Notes p.2 vs Slide 4").
+
+Role and perspective:
+- Write `talking_points[].why_it_lands` from the counterparty's perspective, not the user's. Name the specific stakeholder (e.g., "For Elena as CFO, this reframes the conversation from cost to risk-adjusted return"). Do not use "we" framing in this field.
+- `mitigation` fields should specify concrete actions the account manager can take before or during the meeting, not vague postures.
+- `next_steps[].owner` names an individual. `next_steps[].deadline` is either a specific date taken directly from the source documents or the string "TBD in meeting" — never a fabricated date.
+
+Reasoning constraints (mandatory before responding):
+4. Pre-mortem. Before finalizing `risks`, answer silently: "What would have to be true for this deal to fall through in the next 90 days?" Any condition that meets this bar and is supported by the source documents MUST appear as a High-severity risk, even if the tone of the slide deck suggests otherwise.
+5. Adversarial check. Consider what a competing vendor (e.g., Snowflake, Databricks, or a competitor referenced in the notes) would argue to displace you. If the source documents support that argument, surface it as a risk with a concrete mitigation.
+6. Blind-spot check. Identify at least one question or follow-up that the account manager's notes should have asked but did not — deferred scoping requests, unanswered compliance questions, unexplained changes in stakeholder behavior. Surface this as a talking point with angle = "Question to ask", framing it as the user asking the counterparty, not the counterparty asking the user.
+```
+
+## How the frontend connects to the AI call
+
+The Stitch-generated HTML in `screens/` is visual-only. It has no knowledge of Gemini. The actual Gemini call is built from this spec, not from the frontend. When AI Studio's Build mode generates a deployable app from this document, the wiring is roughly:
+
+```js
+const response = await client.models.generateContent({
+  model: "gemini-3.1-pro-preview",
+  systemInstruction: SYSTEM_PROMPT,          // the block above, verbatim
+  contents: [
+    { role: "user", parts: [
+      { text: "Prepare me for this meeting." },
+      { inlineData: { mimeType: "application/pdf", data: notesB64 } },
+      { inlineData: { mimeType: "application/pdf", data: slidesB64 } },
+    ]}
+  ],
+  config: {
+    responseMimeType: "application/json",
+    responseSchema: OUTPUT_SCHEMA,            // schema/output_schema.json
+    thinkingConfig: { thinkingBudget: "high" },
+    temperature: 1.0,
+    tools: []                                  // all off
+  }
+});
+const prep = JSON.parse(response.text);       // conforms to the schema
+// Frontend renders `prep` into the Synthesis page.
+```
+
+The exact call signature is whatever the current Gemini SDK exposes — the four moving parts (system prompt, schema, model+thinking+temp, file attachments) are what matter.
