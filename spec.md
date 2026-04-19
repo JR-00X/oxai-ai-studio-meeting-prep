@@ -45,7 +45,3 @@ No accounts. No sign-in. No history. No dashboard. No analytics. No settings. No
 - Structured output enforced to `schema/output_schema.json`.
 - System prompt: `prompts/v3.md`.
 - All external tools disabled (no search, no URL fetch, no code execution, no function calling).
-
-## Why this spec and not the nine-screen Stitch set
-
-The Stitch screens (Dashboard, History, Analytics, detail tabs, mitigation views) explored the broader product surface as workflow evidence for the reflection section. A full dashboard-style app is a natural evolution, not a requirement of the assignment brief. The brief asks for a Gem, a schema, UX screens, and an iteration narrative — two screens cover that scope. Everything else is optional and has been generated only to exercise Stitch and inform the reflection.
