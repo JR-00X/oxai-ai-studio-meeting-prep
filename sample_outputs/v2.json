@@ -1,0 +1,74 @@
+{
+  "meeting_summary": {
+    "context": "Acme Corp is a $1.2M ARR customer reaching a critical 90-day renewal window. Despite strong usage growth, internal leadership changes and support failures have put the account at risk.",
+    "headline": "Defensive Renewal Navigation: Addressing Pricing Pressure and SLA Breaches",
+    "participant_snapshot": "The meeting includes Sarah Chen (Champion), Marcus Webb (CTO, impacted by recent support issues), Elena Rodriguez (CFO, driving pricing pressure), and Dev Patel (New Head of Data Science)."
+  },
+  "risks": [
+    {
+      "risk": "Contradictory Support Messaging",
+      "severity": "High",
+      "evidence": "Notes p.2 vs Slide 5",
+      "mitigation": "Proactively address the 48h P1 resolution time during the support section rather than relying on the 18h general average shown on Slide 5. Do not let Marcus (CTO) be the one to point out the discrepancy."
+    },
+    {
+      "risk": "Active Competitive Evaluation",
+      "severity": "High",
+      "evidence": "Notes p.3",
+      "mitigation": "Validate long-term platform value by connecting the 'Roadmap' (Slide 6) specifically to their expansion into healthcare (SOC 2 needs) and EMEA BU rollout."
+    },
+    {
+      "risk": "CFO Intervention and Pricing Pressure",
+      "severity": "High",
+      "evidence": "Notes p.1",
+      "mitigation": "Present the 3-year renewal with locked-in rates (Slide 7) as a direct response to Elena's request for 'pricing flexibility' to preempt further usage-based pricing demands."
+    },
+    {
+      "risk": "Silent Support Dissatisfaction",
+      "severity": "Medium",
+      "evidence": "Notes p.2",
+      "mitigation": "Account Manager must acknowledge the SLA breach on the P1 ticket Marcus was involved in and provide a concrete update on resolution process improvements."
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Operational Efficiency and ROI",
+      "angle": "Value Validation",
+      "evidence": "Slide 3",
+      "why_it_lands": "For Elena as CFO, the 2.4x ROI and reduced analytics team time justifies the $1.2M ARR spend despite internal layoffs and headcount shrinking."
+    },
+    {
+      "topic": "Strategic Roadmap Alignment",
+      "angle": "Future-Proofing",
+      "evidence": "Slide 6",
+      "why_it_lands": "For Marcus as CTO, seeing 'Advanced anomaly detection' and 'Native LLM integration' demonstrates that the vendor is innovating ahead of their internal data science team's current capacity."
+    },
+    {
+      "topic": "Renewal Predictability",
+      "angle": "Financial Stability",
+      "evidence": "Slide 7",
+      "why_it_lands": "For Elena, the 3-year lock-in provides budget certainty through 2029 and removes the annual increase friction that often triggers procurement-led vendor audits."
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "Provide formal quote and timeline for 'Custom data export format'",
+      "owner": "Account Manager",
+      "deadline": "2026-04-12",
+      "dependency": "Engineering scoping review"
+    },
+    {
+      "action": "Schedule 1:1 with Dev Patel to baseline Data Science team requirements",
+      "owner": "Account Manager",
+      "deadline": "2026-04-15",
+      "dependency": null
+    },
+    {
+      "action": "Submit formal SOC 2 Type II compliance roadmap to Sarah Chen",
+      "owner": "Account Manager",
+      "deadline": "2026-04-10",
+      "dependency": "Security Team confirmation"
+    }
+  ],
+  "cover_image_prompt": "A professional and modern digital dashboard overlaying a meeting room view, showing a 2.4x ROI metric and a rising 38% growth chart in navy blue and gold accents, symbolizing corporate growth and strategic alignment."
+}
