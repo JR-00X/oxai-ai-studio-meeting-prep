@@ -1,0 +1,32 @@
+{
+  "meeting_summary": {
+    "context": "string — 2-3 sentences on what this meeting is and why it matters",
+    "headline": "string — the single most important thing to know, in one sentence",
+    "participant_snapshot": "string — who's in the room and what they want"
+  },
+  "risks": [
+    {
+      "risk": "string — the specific thing that could go wrong",
+      "severity": "High | Medium | Low",
+      "evidence": "string — citation to source, e.g., 'Notes p.3' or 'Slide 7'",
+      "mitigation": "string — concrete action the user can take before/during the meeting"
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "string — short label",
+      "angle": "string — the specific point to make",
+      "evidence": "string — citation to source",
+      "why_it_lands": "string — why this point matters to the counterparty specifically"
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "string — the thing to be done",
+      "owner": "string — who owns it",
+      "deadline": "string — when, or 'TBD in meeting'",
+      "dependency": "string | null — what this waits on, if anything"
+    }
+  ],
+  "cover_image_prompt": "string — prompt for an image generator, describing a header image appropriate to the meeting"
+}
