@@ -1,0 +1,74 @@
+{
+  "meeting_summary": {
+    "context": "Q1 2026 Quarterly Business Review (QBR) for Acme Corp, a $1.2M ARR account in a critical 90-day renewal window.",
+    "headline": "Strong usage growth is overshadowed by a looming pricing battle with the CFO, an unaddressed SLA breach witnessed by the CTO, and competitive outreach from [Competitor X].",
+    "participant_snapshot": "Sarah Chen (VP Data/Champion), Marcus Webb (CTO/Quiet supporter), Elena Rodriguez (CFO/Value-focused, joined unprompted), and Dev Patel (Head of DS/Newer, team recently underwent layoffs)."
+  },
+  "risks": [
+    {
+      "risk": "Misleading Support Metrics / SLA Breach",
+      "severity": "High",
+      "evidence": "Notes p.2 vs Slide 5",
+      "mitigation": "Proactively acknowledge the 48h P1 resolution time to Marcus during the support section; do not rely solely on the 18h average in the deck which hides the breach."
+    },
+    {
+      "risk": "Competitive Disruption & Pricing Pressure",
+      "severity": "High",
+      "evidence": "Notes p.1, p.3",
+      "mitigation": "Prepare a formal response to Elena's 'multi-year pricing flexibility' request and prepare to counter [Competitor X] by emphasizing the +38% query growth and integration into their finance reporting."
+    },
+    {
+      "risk": "CTO Alignment on 2026 Roadmap",
+      "severity": "Medium",
+      "evidence": "Notes p.3, Slide 6",
+      "mitigation": "Briefly pause before presenting Slide 6 to ask Marcus if the H1 priorities (Anomaly Detection & Multi-region residency) align with his current technical architecture goals."
+    },
+    {
+      "risk": "Unmet Compliance/Feature Commitments",
+      "severity": "Medium",
+      "evidence": "Notes p.2, p.3",
+      "mitigation": "Provide a definitive timeline for the 'Custom Data Export' quote and confirm if SOC 2 Type II is still a hard requirement for their new healthcare client."
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Value Density post-Layoffs",
+      "angle": "Efficiency Gains",
+      "evidence": "Notes p.2, Slide 4",
+      "why_it_lands": "Dev Patel needs to show that his team is delivering more output (12 new dashboards, +12% MAU) even with 3 fewer heads on his Data Science team."
+    },
+    {
+      "topic": "Custom Data Export Format",
+      "angle": "Question to ask",
+      "evidence": "Notes p.2",
+      "why_it_lands": "Sarah Chen has requested this three times; asking 'What specific downstream systems are blocked by the lack of this export format?' demonstrates a commitment to unblocking her team's technical debt."
+    },
+    {
+      "topic": "Multi-year Partnership and Price Certainty",
+      "angle": "Financial Stability",
+      "evidence": "Notes p.1, Slide 7",
+      "why_it_lands": "Elena Rodriguez is seeking 'multi-year pricing flexibility' and budget predictability; a 3-year renewal with locked-in rates addresses her need for long-term fiscal control."
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "Provide formal quote for Custom Data Export format",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": "Product team scoping from Q2 2025"
+    },
+    {
+      "action": "Confirm SOC 2 Type II timeline requirements for healthcare client",
+      "owner": "Sarah Chen",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    },
+    {
+      "action": "Schedule 1:1 with Dev Patel to align on DS team needs",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    }
+  ],
+  "cover_image_prompt": "A professional and clean corporate graphic showing a rising bar chart (representing +38% query growth) intersecting with a multi-year bridge (representing the 3-year renewal), in a navy and gold color palette."
+}

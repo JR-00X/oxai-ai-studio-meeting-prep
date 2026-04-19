@@ -124,3 +124,44 @@ Reasoning constraints (mandatory before responding):
 **The structural finding.** Prompt engineering on a clean schema closes evidence hygiene, role framing, and competitive framing efficiently. It partially closes contradiction detection (numeric: yes; narrative: yes; stakeholder-alignment: no). A fourth iteration with stakeholder-level pre-mortem examples would likely close the CTO-roadmap gap — but the marginal prompt instruction required to hit every such case suggests a different architecture: retrieval + targeted re-prompts over a single long system prompt. That's a reflection-section finding, not a V4 recipe.
 
 **Settings note for reflection.** All three iterations held Thinking = Low. This was deliberate — it isolates the prompt as the varying input, and V1 already showed strong baseline behavior without thinking-time compute. Running Thinking High on the V3 prompt would be a fourth experiment, not a fourth iteration.
+
+---
+
+## V3 sweep — thinking-level and model trade-offs
+
+Two additional runs on the **V3 system prompt (unchanged)** and the **same inputs**, to isolate two variables separately.
+
+- **V3 Flash-High.** Gemini 3 Flash Preview, Thinking **High**. Fresh chat.
+- **V3 Pro-High.** Gemini **3.1 Pro Preview**, Thinking High. Fresh chat.
+
+Both runs were started as new chats (not branched) to remove prior-turn context pollution from the V1/V2/V3 branched lineage. Token counts below reflect this — V3-Low's 9,501 includes the V1+V2 branch history; V3 Flash-High's 6,478 is the true cost of a single V3 exchange.
+
+| Run | Model | Thinking | Tokens | CTO-roadmap risk | Growth-vs-layoffs tension | Pricing framing |
+|---|---|---|---|---|---|---|
+| V3-Low | Flash | Low | 9,501 (branched) | **Missed** | Reframed as positive talking point | Single pricing-pressure risk |
+| V3 Flash-High | Flash | High | 6,478 (fresh) | Caught at **Medium**, soft mitigation | Still reframed as positive | Combined with competitor risk |
+| V3 Pro-High | Pro | High | 9,984 (fresh) | Caught at **High**, sharp mitigation | Reframed as *clarification question* (epistemic, not promotional) | Framed as slide-notes **contradiction** (Notes p.3 vs Slide 7) |
+
+**Artifacts.** `prompts/v3_flash_high.md`, `prompts/v3_pro_high.md`, `sample_outputs/v3_flash_high.json`, `sample_outputs/v3_pro_high.json`, `screens/ai_studio_v3_flash_high.png`, `screens/ai_studio_v3_pro_high.png`.
+
+**Flash-High vs Flash-Low — what High-thinking adds on the same model.**
+- *Partial close on CTO-roadmap.* Flash-High flags the roadmap-alignment risk but at Medium severity, with a mitigation that reads as defensive ("briefly pause before presenting Slide 6 to ask Marcus if H1 priorities align"). The risk is acknowledged, not defused.
+- *No progress on the growth-vs-layoffs framing.* Flash-High still routes the tension into a positive talking point ("Dev needs to show his team is delivering more output with 3 fewer heads"). Thinking time did not break the sales instinct.
+- *New regression.* `next_steps[1].owner` = "Sarah Chen" (the counterparty), not "Account Manager". Minor spec drift — the V3 prompt requires an individual owner but not specifically the AM, so technically compliant, but it moves the accountability outside the user.
+
+**Pro-High vs Flash-High — what the larger model adds at identical thinking level.**
+- *CTO-roadmap landmine caught at the right severity.* Pro-High flags this as High, with a concrete mitigation that defuses the landmine in the room: "Frame Slide 6 verbally as a 'draft roadmap for CTO input' rather than a finalized plan. Give Marcus the floor immediately after presenting the slide." This is the single clearest behavioral gap between Flash and Pro on this task.
+- *Growth-vs-layoffs reframed epistemically.* Pro surfaces the tension as a `Clarification` question: "Dev needs to understand if his remaining, smaller team is simply working heavier hours to inflate these metrics, or if self-serve capabilities are genuinely expanding to other departments." The model is reasoning about what the data actually measures, not just asserting a direction.
+- *Pricing framed as a true contradiction.* Pro applies rule #3 more broadly, flagging the 3-year flat-rate proposal (Slide 7) as a contradiction to Elena's documented usage-based-pricing ask (Notes p.3) — with a mitigation that instructs the AM to bring the usage-based comparison and be ready to pivot.
+- *Causal reasoning across notes pages.* Pro connects the competitor threat (Notes p.3) to the repeatedly-delayed custom data export (Notes p.2) — "they can leverage the vendor's unresponsiveness... to steal the account." Flash treats these as separate risks; Pro explains why one is material *because of* the other.
+- *Mitigations are multi-step.* Pro routinely emits two-clause mitigations ("Position X as anchor... but be prepared to pivot to Y if Z"). Flash emits single-step mitigations.
+
+**What the sweep means for model selection.**
+- Prompt engineering alone reliably closes citation hygiene, role framing, and competitive framing. It unreliably closes narrative/stakeholder-alignment contradictions.
+- Adding thinking time to Flash partially closes the gap but does not change the model's framing instinct.
+- Switching to Pro closes the remaining gap *at this price point*. The CTO-roadmap landmine — the risk most likely to end the real meeting — is only reliably caught by Pro.
+- Token cost of Pro-High (9,984) vs Flash-High (6,478) is a ~54% overhead on the same task. For a meeting-prep use case where the user is about to walk into a $1.2M renewal conversation, that overhead is trivially justified. For high-volume batch use cases it would not be.
+
+**The two structural findings for the reflection.**
+1. **Prompt is a necessary but insufficient lever** for tasks requiring cross-document narrative inference. Model capacity matters, and no amount of V4-style prompt extension is likely to fully compensate.
+2. **Branched chats leak context into experiments.** The token delta alone (9,501 → 6,478 on an identical V3 prompt) shows the V1+V2 turns were in the V3-Low context. For any rigorous model-behavior comparison, fresh chats are the only defensible protocol.

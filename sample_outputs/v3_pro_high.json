@@ -1,0 +1,74 @@
+{
+  "meeting_summary": {
+    "context": "Q1 2026 Quarterly Business Review and 90-day renewal discussion for a $1.2M ARR mid-market SaaS account.",
+    "headline": "Strong top-line usage metrics mask severe churn risks driven by SLA breaches, unresolved feature requests, and new CFO/Procurement scrutiny.",
+    "participant_snapshot": "Sarah Chen (VP Data, Champion), Marcus Webb (CTO, quiet supporter but affected by recent SLA breach), Elena Rodriguez (CFO, unprompted attendance signals pricing scrutiny), Dev Patel (Head of Data Science, recently lost headcount)."
+  },
+  "risks": [
+    {
+      "risk": "Contradiction on Support Metrics: The deck presents an 18-hour average resolution time, which directly conflicts with the CTO's recent experience of a 48-hour resolution on P1 tickets, representing an SLA breach.",
+      "severity": "High",
+      "evidence": "Notes p.2 vs Slide 5",
+      "mitigation": "Do not wait for Marcus to point out the discrepancy. Address the P1 SLA breach proactively when presenting Slide 5, explain the specific root cause for the 48-hour delay, and outline the corrective actions taken to ensure 24-hour compliance moving forward."
+    },
+    {
+      "risk": "Pricing Proposal Mismatch: The renewal proposal pitches a 3-year locked flat-rate, but the CFO recently requested usage-based options and Procurement is now active on all emails. Presenting only a flat-rate lock may cause the CFO to block the renewal.",
+      "severity": "High",
+      "evidence": "Notes p.3 vs Slide 7",
+      "mitigation": "Bring the usage-based pricing comparison that Elena previously requested. Position the 3-year flat-rate as an anchor for predictability, but be prepared to pivot immediately to the usage-based model if Elena or Procurement object."
+    },
+    {
+      "risk": "Competitor Displacement: Competitor X has recently reached out to the champion. They can leverage the vendor's unresponsiveness regarding the repeatedly delayed custom data export format to steal the account.",
+      "severity": "High",
+      "evidence": "Notes p.3 vs Notes p.2",
+      "mitigation": "Arrive at the meeting with a definitive quote and delivery timeline for the custom data export format to close the open loop. Ask Sarah directly if Competitor X is offering this feature out-of-the-box."
+    },
+    {
+      "risk": "CTO Misalignment on Roadmap: The CTO has not seen the 2026 roadmap, yet 'roadmap' was explicitly added to the meeting invite. If he disagrees with the technical direction presented on the slide in real-time, it could derail the renewal.",
+      "severity": "High",
+      "evidence": "Notes p.3 vs Slide 6",
+      "mitigation": "Frame Slide 6 verbally as a 'draft roadmap for CTO input' rather than a finalized plan. Give Marcus the floor immediately after presenting the slide to voice his technical priorities."
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "SOC 2 Type II compliance requirement for healthcare client",
+      "angle": "Question to ask",
+      "evidence": "Notes p.3",
+      "why_it_lands": "For Sarah, clarifying compliance prerequisites ensures her data team won't be blindsided by security blockers from her own healthcare clients, protecting her reputation and operational timeline."
+    },
+    {
+      "topic": "MAU growth amidst Data Science headcount reduction",
+      "angle": "Clarification",
+      "evidence": "Notes p.2 vs Slide 4",
+      "why_it_lands": "Dev needs to understand if his remaining, smaller team is simply working heavier hours to inflate these metrics, or if self-serve capabilities are genuinely expanding to other departments, which helps him justify tooling ROI to Elena."
+    },
+    {
+      "topic": "Finalizing the Custom Data Export request",
+      "angle": "Accountability",
+      "evidence": "Notes p.2",
+      "why_it_lands": "After three delays, Sarah needs a firm quote and timeline so she can accurately plan her team's integration workload and feel confident that her operational requests are valued."
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "Provide final quote and timeline for custom data export format.",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    },
+    {
+      "action": "Review usage-based pricing models alongside the 3-year flat-rate proposal.",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    },
+    {
+      "action": "Confirm if SOC 2 Type II is a strict requirement for their upcoming healthcare client.",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    }
+  ],
+  "cover_image_prompt": "A professional corporate meeting room setting with a subtle split-screen effect: one side showing upward trending charts indicating growth, and the other side showing a magnifying glass over a contract, symbolizing underlying scrutiny and the need for careful alignment."
+}
