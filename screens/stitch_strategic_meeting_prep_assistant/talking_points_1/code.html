@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Acme Corp · Q1 2026 QBR - Talking Points</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#fbf9f5",
+                        "inverse-surface": "#30312e",
+                        "background": "#fbf9f5",
+                        "surface-dim": "#dbdad6",
+                        "primary-container": "#1e2761",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#5b6374",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#dbe2f7",
+                        "outline": "#767681",
+                        "secondary-fixed-dim": "#bfc6db",
+                        "secondary": "#565e70",
+                        "primary": "#06104c",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-primary-container": "#8790d0",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f5f3ef",
+                        "secondary-container": "#d8e0f4",
+                        "surface-variant": "#e4e2de",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#3c2a00",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-tint": "#515a96",
+                        "surface-bright": "#fbf9f5",
+                        "on-error-container": "#93000a",
+                        "surface-container": "#efeeea",
+                        "tertiary": "#221600",
+                        "outline-variant": "#c6c5d1",
+                        "surface-container-high": "#eae8e4",
+                        "primary-fixed": "#dfe0ff",
+                        "on-secondary-fixed": "#141c2a",
+                        "on-primary-fixed-variant": "#39427d",
+                        "tertiary-fixed": "#ffdea4",
+                        "surface-container-highest": "#e4e2de",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "on-surface": "#1b1c1a",
+                        "on-primary-fixed": "#0a144f",
+                        "tertiary-fixed-dim": "#f3bf53",
+                        "inverse-on-surface": "#f2f0ed",
+                        "inverse-primary": "#bbc3ff",
+                        "on-secondary-fixed-variant": "#3f4757",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-background": "#1b1c1a",
+                        "on-tertiary-container": "#bb8d24",
+                        "on-surface-variant": "#464650"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {},
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #fbf9f5; color: #1b1c1a; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<nav class="h-screen w-64 fixed left-0 top-0 z-50 bg-[#efeeea] dark:bg-[#121312] shadow-[40px_0_60px_-15px_rgba(27,28,26,0.06)] flex flex-col py-8 hidden md:flex">
+<div class="px-8 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline font-bold text-sm">EA</div>
+<div>
+<h1 class="font-black text-[#06104c] dark:text-[#fbf9f5] uppercase tracking-widest text-xs">The Silent Partner</h1>
+<p class="font-['Manrope'] font-medium text-xs text-secondary">Executive Dossier v1.0</p>
+</div>
+</div>
+</div>
+<div class="px-4 mb-6">
+<button class="w-full bg-primary text-on-primary font-body font-medium text-sm py-2 px-4 rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                + New Briefing
+            </button>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<a class="font-['Manrope'] font-medium text-sm text-[#565e70] dark:text-[#9ea4b0] pl-8 py-3 flex items-center gap-3 hover:bg-[#fbf9f5]/50 dark:hover:bg-[#1b1c1a]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">dashboard</span>
+                Dashboard
+            </a>
+<a class="font-['Manrope'] font-medium text-sm text-[#06104c] dark:text-[#f3bf53] font-bold bg-[#fbf9f5] dark:bg-[#1b1c1a] rounded-l-lg ml-4 pl-4 py-3 flex items-center gap-3 active:scale-[0.98] transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">description</span>
+                Briefings
+            </a>
+<a class="font-['Manrope'] font-medium text-sm text-[#565e70] dark:text-[#9ea4b0] pl-8 py-3 flex items-center gap-3 hover:bg-[#fbf9f5]/50 dark:hover:bg-[#1b1c1a]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">history</span>
+                History
+            </a>
+<a class="font-['Manrope'] font-medium text-sm text-[#565e70] dark:text-[#9ea4b0] pl-8 py-3 flex items-center gap-3 hover:bg-[#fbf9f5]/50 dark:hover:bg-[#1b1c1a]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+                Analytics
+            </a>
+</div>
+<div class="mt-auto flex flex-col gap-1">
+<a class="font-['Manrope'] font-medium text-sm text-[#565e70] dark:text-[#9ea4b0] pl-8 py-3 flex items-center gap-3 hover:bg-[#fbf9f5]/50 dark:hover:bg-[#1b1c1a]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">help</span>
+                Support
+            </a>
+<a class="font-['Manrope'] font-medium text-sm text-[#565e70] dark:text-[#9ea4b0] pl-8 py-3 flex items-center gap-3 hover:bg-[#fbf9f5]/50 dark:hover:bg-[#1b1c1a]/50 transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span>
+                Sign Out
+            </a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col">
+<!-- TopNavBar (Contextual for Briefing) -->
+<header class="w-full h-16 sticky top-0 z-40 bg-[#fbf9f5] dark:bg-[#1b1c1a] bg-[#efeeea] dark:bg-[#2a2b29] border-b border-opacity-10 border-[#06104c] flex justify-between items-center px-8">
+<div class="flex items-center gap-4">
+<div class="font-['Manrope'] font-semibold tracking-tight text-[#06104c] dark:text-[#fbf9f5] text-xl flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">domain</span>
+                    Acme Corp · Q1 2026 QBR
+                </div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#565e70] dark:text-[#9ea4b0] hover:text-[#06104c] dark:hover:text-[#f3bf53] transition-colors duration-200">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-[#565e70] dark:text-[#9ea4b0] hover:text-[#06104c] dark:hover:text-[#f3bf53] transition-colors duration-200">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<img alt="Executive User Profile" class="w-8 h-8 rounded-full border border-surface-variant" data-alt="professional headshot of an executive in a grey suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa1JKf8o0xO6VK4hI3HJaVhlzkeDxcePRggfet95eu9qKbBbOsNMXZkEvsE2KC1Iy--2qW7LtjbqRVtuKuAsPkOHOa1ZNrJImT6aZXSjeemoy1HcJtSfsdas53Z54LXYJGdTb23zYta0Q0Za-2NJ_OU5DOpwmRcUn1JmymJarRsr6RwtCM8vwdyD91kegl0-XlV69vvnVsrLxsdSAZEDT2huIsrKN4-Lpy5uAfN_MzhyjUb0O8CNhpCw9rLHX4zlmqBKA1MNt_CXqd"/>
+</div>
+</header>
+<!-- Briefing Tab Strip -->
+<div class="px-8 pt-6 border-b border-surface-variant bg-surface-container-low/50">
+<div class="flex gap-8">
+<a class="font-headline font-semibold text-sm text-secondary pb-4 hover:text-primary transition-colors" href="#">Executive Summary</a>
+<a class="font-headline font-semibold text-sm text-secondary pb-4 hover:text-primary transition-colors" href="#">Attendees</a>
+<a class="font-headline font-semibold text-sm text-primary border-b-2 border-tertiary-fixed-dim pb-4" href="#">Talking Points</a>
+<a class="font-headline font-semibold text-sm text-secondary pb-4 hover:text-primary transition-colors" href="#">Recent News</a>
+</div>
+</div>
+<!-- Content Area -->
+<div class="flex-1 p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Talking Points Stack -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim"></div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-tertiary-fixed/30 text-on-tertiary-container text-xs font-semibold px-3 py-1 rounded-full font-headline">Value Validation</span>
+</div>
+<button class="text-secondary hover:text-primary"><span class="material-symbols-outlined">more_horiz</span></button>
+</div>
+<h3 class="font-headline text-xl text-primary font-bold mb-3 tracking-tight">Confirming ROI on Q4 Cloud Migration</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        "Sarah, looking at the data since the October cutover, we're seeing a 22% reduction in latency across your European nodes. I'd love to hear how that's translating to the end-user experience on your side."
+                    </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<h4 class="font-headline text-xs font-bold text-primary mb-2 uppercase tracking-wider">Why it lands</h4>
+<p class="font-body text-sm text-secondary">Anchors the conversation in shared success immediately. Sarah's main KPI for last year was European market stability; acknowledging this validates her strategy.</p>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1 bg-surface text-xs text-secondary px-2 py-1 rounded border border-surface-variant font-body"><span class="material-symbols-outlined text-[14px]">bar_chart</span> Q4 Performance Report</span>
+<span class="inline-flex items-center gap-1 bg-surface text-xs text-secondary px-2 py-1 rounded border border-surface-variant font-body"><span class="material-symbols-outlined text-[14px]">mail</span> Email from Sarah (Nov 12)</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-primary-fixed text-on-primary-fixed text-xs font-semibold px-3 py-1 rounded-full font-headline">Question to ask</span>
+</div>
+</div>
+<h3 class="font-headline text-xl text-primary font-bold mb-3 tracking-tight">Navigating the upcoming merger rumors</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        "With the broader industry consolidation we're seeing—and acknowledging the noise in the press—how are you advising the board to approach infrastructure investments for the next 18 months?"
+                    </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<h4 class="font-headline text-xs font-bold text-primary mb-2 uppercase tracking-wider">Why it lands</h4>
+<p class="font-body text-sm text-secondary">Addresses the elephant in the room (BetaCorp merger rumors) without forcing them to confirm. Frames it as a strategic, rather than tactical, discussion.</p>
+</div>
+<div class="flex gap-2">
+<span class="inline-flex items-center gap-1 bg-surface text-xs text-secondary px-2 py-1 rounded border border-surface-variant font-body"><span class="material-symbols-outlined text-[14px]">article</span> WSJ Article (Jan 15)</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error-container"></div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="bg-error-container text-on-error-container text-xs font-semibold px-3 py-1 rounded-full font-headline">Risk Mitigation</span>
+</div>
+</div>
+<h3 class="font-headline text-xl text-primary font-bold mb-3 tracking-tight">Addressing the Q3 Support SLA Miss</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">
+                        "Before we look ahead, I want to address the Q3 support ticket backlog. We fell short of our 4-hour SLA in August. We've since implemented the new routing protocol, but I want to ensure you're feeling the impact of those changes."
+                    </p>
+<div class="bg-surface-container-low rounded-lg p-4 mb-4">
+<h4 class="font-headline text-xs font-bold text-primary mb-2 uppercase tracking-wider">Why it lands</h4>
+<p class="font-body text-sm text-secondary">Own the failure early. Don't wait for them to bring it up. Emphasizes the fix rather than dwelling on the issue.</p>
+</div>
+</div>
+</div>
+<!-- Right Rail: Practice Mode -->
+<div class="lg:col-span-4 relative">
+<div class="sticky top-24 bg-surface-container-lowest rounded-xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-lg font-bold text-primary">Practice Mode</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[24px]">mic</span>
+</div>
+<p class="font-body text-sm text-secondary mb-6">
+                        Rehearse your talking points. The Silent Partner will analyze your pacing, tone, and coverage of key topics.
+                    </p>
+<button class="w-full bg-primary text-on-primary font-headline font-semibold text-sm py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+                        Start practice run
+                    </button>
+<div class="mt-4 pt-4 border-t border-surface-variant flex items-center justify-between">
+<span class="font-body text-xs text-secondary">Estimated time</span>
+<span class="font-headline font-semibold text-sm text-primary">8 mins</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

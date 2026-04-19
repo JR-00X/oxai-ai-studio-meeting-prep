@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mitigation: CTO misalignment on roadmap - The Brief</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdea4",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-container": "#3c2a00",
+                      "on-tertiary-fixed": "#261900",
+                      "surface-dim": "#dbdad6",
+                      "surface-bright": "#fbf9f5",
+                      "secondary-fixed": "#dbe2f7",
+                      "on-background": "#1b1c1a",
+                      "on-surface-variant": "#464650",
+                      "on-error-container": "#93000a",
+                      "surface": "#fbf9f5",
+                      "primary": "#06104c",
+                      "surface-container-highest": "#e4e2de",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#3f4757",
+                      "inverse-surface": "#30312e",
+                      "on-primary-fixed": "#0a144f",
+                      "surface-tint": "#515a96",
+                      "primary-container": "#1e2761",
+                      "outline-variant": "#c6c5d1",
+                      "secondary-fixed-dim": "#bfc6db",
+                      "secondary-container": "#d8e0f4",
+                      "on-primary-container": "#8790d0",
+                      "primary-fixed-dim": "#bbc3ff",
+                      "primary-fixed": "#dfe0ff",
+                      "on-tertiary-fixed-variant": "#5d4200",
+                      "inverse-on-surface": "#f2f0ed",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f5f3ef",
+                      "surface-container-high": "#eae8e4",
+                      "tertiary-fixed-dim": "#f3bf53",
+                      "on-primary": "#ffffff",
+                      "error": "#ba1a1a",
+                      "tertiary": "#221600",
+                      "inverse-primary": "#bbc3ff",
+                      "secondary": "#565e70",
+                      "on-primary-fixed-variant": "#39427d",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-container": "#5b6374",
+                      "on-tertiary-container": "#bb8d24",
+                      "on-surface": "#1b1c1a",
+                      "background": "#fbf9f5",
+                      "on-secondary-fixed": "#141c2a",
+                      "surface-variant": "#e4e2de",
+                      "outline": "#767681",
+                      "surface-container": "#efeeea",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Manrope"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen antialiased flex">
+<!-- SideNavBar -->
+<nav class="bg-[#fbf9f5] dark:bg-slate-950 text-[#06104c] dark:text-slate-100 font-['Inter'] text-sm antialiased border-r border-[#efeeea] dark:border-slate-800 h-screen w-64 fixed left-0 top-0 hidden lg:flex flex-col z-40">
+<div class="flex flex-col p-6 space-y-4 h-full">
+<div class="mb-8">
+<h2 class="text-lg font-black text-[#06104c] dark:text-slate-100 font-headline tracking-tight">The Brief</h2>
+</div>
+<!-- Tab List -->
+<div class="flex-1 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="tactic">tactic</span>
+<span>Strategy</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="warning">warning</span>
+<span>Risk Registry</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 bg-[#efeeea] dark:bg-slate-900 text-[#06104c] font-semibold rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span>Briefings</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span>Archive</span>
+</a>
+</div>
+<!-- Footer Tabs -->
+<div class="pt-6 border-t border-[#efeeea] dark:border-slate-800 space-y-2">
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span>Help</span>
+</a>
+<a class="flex items-center space-x-3 px-4 py-3 text-[#565e70] dark:text-slate-400 hover:bg-[#efeeea] dark:hover:bg-slate-900 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 lg:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#fbf9f5] dark:bg-slate-950 text-[#06104c] dark:text-slate-100 font-['Manrope'] tracking-tight w-full sticky top-0 z-30">
+<div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<h1 class="text-xl font-bold text-[#06104c] dark:text-slate-100">Meeting Prep</h1>
+<span class="text-secondary text-sm font-body px-3 py-1 bg-surface-container rounded-full hidden sm:inline-block">Acme Corp · Q1 2026 QBR</span>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#565e70] dark:text-slate-400 hover:text-[#06104c] transition-colors cursor-pointer active:opacity-80 flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="picture_as_pdf">picture_as_pdf</span>
+                        Export PDF
+                    </button>
+<button class="text-[#565e70] dark:text-slate-400 hover:text-[#06104c] transition-colors cursor-pointer active:opacity-80 flex items-center gap-2 text-sm font-medium">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+                        Share
+                    </button>
+<img alt="Executive Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant/30" data-alt="professional corporate headshot of a mature executive in a navy suit against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAizUf5dd8dE_L5-gF7lIvrRf5NTJjMtEEaEUKDPlVs63JuArNMEInRfpIGugLPKxDqul8XDisiQGoVrqj46hvkAcX_UhVxeAQDH6OSD1s_NOSvs3bdnYIRwIDt6Q4_2Ogi32givZXBgCoOZ5_9q1lT5skCPqY6DaKwWqG2qInZe8or1mSOG_61txjtIaTEkE33MGEPsSXRIptW1CPE4DBwUfwnrkkPuCa1dNWLvCDqnbg8S9cEyfP372n39wVc5PMO7kCMUK26VeYc"/>
+</div>
+</div>
+<div class="bg-[#efeeea] dark:bg-slate-900 h-[1px] w-full"></div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 w-full max-w-4xl mx-auto px-6 py-12 lg:px-12 flex flex-col gap-10">
+<!-- Breadcrumb / Back -->
+<div>
+<a class="inline-flex items-center gap-2 text-secondary hover:text-primary transition-colors font-medium text-sm group" href="#">
+<span class="material-symbols-outlined text-lg group-hover:-translate-x-1 transition-transform" data-icon="arrow_back">arrow_back</span>
+                    Back to Risks
+                </a>
+</div>
+<!-- Header Section -->
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center px-3 py-1 bg-error-container text-on-error-container rounded-full w-fit gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span>
+<span class="text-xs font-bold tracking-wide uppercase">High Priority Risk</span>
+</div>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-tight">
+                    Mitigation: CTO misalignment on roadmap
+                </h1>
+<p class="text-secondary text-lg font-body max-w-2xl leading-relaxed">
+                    Actionable talking points and solutions to address this risk during the meeting. Focus on collaborative problem-solving and establishing clear timelines.
+                </p>
+</div>
+<!-- Mitigation Cards Stack -->
+<div class="flex flex-col gap-6 mt-4">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 flex gap-6 relative overflow-hidden group">
+<!-- Gold Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim rounded-l-xl"></div>
+<div class="flex-shrink-0 mt-1">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="visibility">visibility</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline text-xl font-bold text-primary">Clarify Technical Barriers</h3>
+<p class="text-on-surface-variant font-body leading-relaxed text-base">
+                            Ask the CTO to detail the specific constraints mentioned in the pre-read notes to ensure the account team fully understands the bottleneck. Listen for mentions of legacy system integration challenges.
+                        </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 flex gap-6 relative overflow-hidden">
+<!-- Gold Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim rounded-l-xl"></div>
+<div class="flex-shrink-0 mt-1">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="architecture">architecture</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline text-xl font-bold text-primary">Propose Iterative Deployment</h3>
+<p class="text-on-surface-variant font-body leading-relaxed text-base">
+                            Suggest a phased roadmap that addresses the CTO's resource concerns while still hitting the client's key Q3 milestones. Present the 'Crawl, Walk, Run' implementation slide as a visual aid.
+                        </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 md:p-8 flex gap-6 relative overflow-hidden">
+<!-- Gold Accent Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim rounded-l-xl"></div>
+<div class="flex-shrink-0 mt-1">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="list_alt">list_alt</span>
+</div>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="font-headline text-xl font-bold text-primary">Resource Reallocation Review</h3>
+<p class="text-on-surface-variant font-body leading-relaxed text-base">
+                            Discuss the possibility of shifting internal engineering focus from lower-priority projects to close the alignment gap on the QBR deck. Identify which secondary initiatives can be safely deferred.
+                        </p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

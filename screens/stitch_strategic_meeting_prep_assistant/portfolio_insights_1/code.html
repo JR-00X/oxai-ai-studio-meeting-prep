@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Insights - The Executive Brief</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#221600",
+                    "on-secondary-container": "#5b6374",
+                    "inverse-primary": "#bbc3ff",
+                    "error": "#ba1a1a",
+                    "outline": "#767681",
+                    "on-secondary-fixed": "#141c2a",
+                    "surface-bright": "#fbf9f5",
+                    "secondary-fixed-dim": "#bfc6db",
+                    "inverse-surface": "#30312e",
+                    "surface-variant": "#e4e2de",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#8790d0",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fbf9f5",
+                    "tertiary-fixed": "#ffdea4",
+                    "surface-container-low": "#f5f3ef",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#464650",
+                    "surface-container": "#efeeea",
+                    "primary-fixed-dim": "#bbc3ff",
+                    "surface-dim": "#dbdad6",
+                    "secondary-fixed": "#dbe2f7",
+                    "tertiary-fixed-dim": "#f3bf53",
+                    "surface-container-high": "#eae8e4",
+                    "on-tertiary-container": "#bb8d24",
+                    "outline-variant": "#c6c5d1",
+                    "on-primary-fixed": "#0a144f",
+                    "surface-container-highest": "#e4e2de",
+                    "primary": "#06104c",
+                    "on-secondary-fixed-variant": "#3f4757",
+                    "primary-fixed": "#dfe0ff",
+                    "on-primary-fixed-variant": "#39427d",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#3c2a00",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#515a96",
+                    "on-background": "#1b1c1a",
+                    "secondary-container": "#d8e0f4",
+                    "on-surface": "#1b1c1a",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5d4200",
+                    "on-tertiary-fixed": "#261900",
+                    "inverse-on-surface": "#f2f0ed",
+                    "primary-container": "#1e2761",
+                    "background": "#fbf9f5",
+                    "secondary": "#565e70"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {},
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="flex flex-col w-64 fixed h-full py-8 pl-4 bg-[#efeeea] dark:bg-slate-800 border-r-0 flat no shadows z-50">
+<div class="mb-10 px-6">
+<span class="text-[#06104c] dark:text-blue-100 text-xl font-bold italic font-headline block mb-1">Executive Brief</span>
+<span class="text-secondary text-xs font-body uppercase tracking-wider font-semibold">The Silent Partner</span>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 text-[#565e70] dark:text-slate-400 py-3 px-6 hover:text-[#06104c] hover:bg-[#f5f3f0] dark:hover:bg-slate-700 transition-all duration-200 font-['Manrope'] font-semibold tracking-tight text-sm rounded-l-full" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-3 text-[#565e70] dark:text-slate-400 py-3 px-6 hover:text-[#06104c] hover:bg-[#f5f3f0] dark:hover:bg-slate-700 transition-all duration-200 font-['Manrope'] font-semibold tracking-tight text-sm rounded-l-full" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="description">description</span>
+                Briefings
+            </a>
+<a class="flex items-center gap-3 text-[#565e70] dark:text-slate-400 py-3 px-6 hover:text-[#06104c] hover:bg-[#f5f3f0] dark:hover:bg-slate-700 transition-all duration-200 font-['Manrope'] font-semibold tracking-tight text-sm rounded-l-full" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="event">event</span>
+                Calendar
+            </a>
+<!-- Active State using Analytics intent -->
+<a class="flex items-center gap-3 bg-[#fbf9f5] dark:bg-slate-900 text-[#06104c] dark:text-white rounded-l-full py-3 px-6 shadow-sm font-['Manrope'] font-semibold tracking-tight text-sm translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="insights">insights</span>
+                Analytics
+            </a>
+<a class="flex items-center gap-3 text-[#565e70] dark:text-slate-400 py-3 px-6 hover:text-[#06104c] hover:bg-[#f5f3f0] dark:hover:bg-slate-700 transition-all duration-200 font-['Manrope'] font-semibold tracking-tight text-sm rounded-l-full" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="settings">settings</span>
+                Settings
+            </a>
+</div>
+<div class="px-6 mt-8">
+<button class="w-full bg-primary text-on-primary rounded-lg py-3 px-4 font-body text-sm font-semibold hover:bg-primary-container transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+                + New Briefing
+            </button>
+</div>
+<div class="mt-8 px-6 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-variant flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Executive User Profile" class="w-full h-full object-cover" data-alt="Professional headshot of a mature executive in a navy suit against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiZn4dYlLiYnHdVvMXbn7TmkOyR1eIa1h5Q71uUr9wDu5FRGKh8zjjAKdSrRHdZIKzVTZsAlR7MciZiy7R8359zLs7Bcjqx6nEdAHxT08kcnbyrhuArqKoMznWcVTozrEqip45XGUFu3aFJqCi-TdwTvnfm2zoWplNzrjDQtRdrF7lKCjni0gFN5f1tg3JkljuvcEnFr-YEg2JA7cllm6YlFX2UVYX_3Afy6KoAI4m8QrVa0OnOvUIgEzngsWdHiiHZmIFgwOUnBEo"/>
+</div>
+<div>
+<p class="text-sm font-semibold text-primary font-body">E. Reynolds</p>
+<p class="text-xs text-secondary font-body">Partner</p>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-64 min-h-screen bg-background relative">
+<!-- Top Header Area (Not TopAppBar component, just page header) -->
+<header class="px-12 py-12 pb-6 max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h1 class="font-headline text-4xl font-extrabold tracking-tight text-primary mb-2">Portfolio insights</h1>
+<p class="font-body text-secondary text-lg">Patterns across your last 90 days of briefings.</p>
+</div>
+<!-- Period Selector -->
+<div class="flex items-center bg-surface-container-low rounded-lg p-1 shrink-0">
+<button class="px-4 py-2 text-sm font-medium font-body text-secondary hover:text-primary transition-colors rounded-md">30 days</button>
+<button class="px-4 py-2 text-sm font-bold font-body text-primary bg-surface-container-lowest shadow-sm rounded-md transition-colors">90 days</button>
+<button class="px-4 py-2 text-sm font-medium font-body text-secondary hover:text-primary transition-colors rounded-md">12 months</button>
+</div>
+</header>
+<!-- Main Dashboard Canvas -->
+<div class="px-12 pb-16 max-w-7xl mx-auto space-y-8">
+<!-- 2 Column Grid for Cards A-D -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Card A: Most common risk categories (Bar chart representation) -->
+<section class="bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden group hover:bg-surface-container-low transition-colors duration-300">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<div class="flex justify-between items-start mb-6">
+<h2 class="font-headline text-xl font-bold text-primary">Most common risk categories</h2>
+<span class="material-symbols-outlined text-secondary opacity-50">warning</span>
+</div>
+<div class="space-y-4">
+<!-- Bar 1 -->
+<div>
+<div class="flex justify-between text-sm font-body mb-1">
+<span class="text-on-surface font-medium">Regulatory Compliance</span>
+<span class="text-secondary">42%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 42%"></div>
+</div>
+</div>
+<!-- Bar 2 -->
+<div>
+<div class="flex justify-between text-sm font-body mb-1">
+<span class="text-on-surface font-medium">Supply Chain Delay</span>
+<span class="text-secondary">28%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary/80 h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Bar 3 -->
+<div>
+<div class="flex justify-between text-sm font-body mb-1">
+<span class="text-on-surface font-medium">Executive Turnover</span>
+<span class="text-secondary">15%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary/60 h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+<!-- Bar 4 -->
+<div>
+<div class="flex justify-between text-sm font-body mb-1">
+<span class="text-on-surface font-medium">Market Volatility</span>
+<span class="text-secondary">15%</span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-primary/40 h-full rounded-full" style="width: 15%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Card B: Ranked list for 'Deals most at risk' -->
+<section class="bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden group hover:bg-surface-container-low transition-colors duration-300">
+<div class="absolute top-0 left-0 w-1 h-full bg-error"></div>
+<div class="flex justify-between items-start mb-6">
+<h2 class="font-headline text-xl font-bold text-primary">Deals most at risk</h2>
+<span class="material-symbols-outlined text-error opacity-70">trending_down</span>
+</div>
+<div class="flex flex-col space-y-0">
+<!-- Item 1 -->
+<div class="py-3 flex justify-between items-center group-hover:bg-surface-container-lowest/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-error-container text-on-error-container flex items-center justify-center text-xs font-bold font-body">1</div>
+<div>
+<p class="font-body text-sm font-semibold text-on-surface">Project Helios</p>
+<p class="font-body text-xs text-secondary">Acquisition - $45M</p>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container text-xs px-2 py-1 rounded-full font-semibold font-body">Critical</span>
+</div>
+<!-- Item 2 -->
+<div class="py-3 flex justify-between items-center group-hover:bg-surface-container-lowest/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container text-secondary flex items-center justify-center text-xs font-bold font-body">2</div>
+<div>
+<p class="font-body text-sm font-semibold text-on-surface">Vanguard Merger</p>
+<p class="font-body text-xs text-secondary">M&amp;A - $120M</p>
+</div>
+</div>
+<span class="text-error text-xs font-semibold font-body">High Risk</span>
+</div>
+<!-- Item 3 -->
+<div class="py-3 flex justify-between items-center group-hover:bg-surface-container-lowest/50 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded-full bg-surface-container text-secondary flex items-center justify-center text-xs font-bold font-body">3</div>
+<div>
+<p class="font-body text-sm font-semibold text-on-surface">Q3 Licensing Exp.</p>
+<p class="font-body text-xs text-secondary">Renewal - $12M</p>
+</div>
+</div>
+<span class="text-tertiary-fixed-dim text-xs font-semibold font-body">Elevated</span>
+</div>
+</div>
+</section>
+<!-- Card C: Donut chart for 'Citation coverage' -->
+<section class="bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden flex flex-col justify-between">
+<div class="absolute top-0 left-0 w-1 h-full bg-tertiary-fixed-dim"></div>
+<div>
+<h2 class="font-headline text-xl font-bold text-primary mb-1">Citation coverage</h2>
+<p class="font-body text-sm text-secondary mb-6">Percentage of briefing claims backed by primary sources.</p>
+</div>
+<div class="flex items-center justify-center gap-8 py-4">
+<!-- CSS Donut Chart Representation -->
+<div class="relative w-32 h-32 rounded-full border-8 border-surface-container flex items-center justify-center">
+<!-- Visual Hack for Donut (complex to do purely in CSS without SVG, using border colors for simplicity in structural requirement) -->
+<div class="absolute inset-0 rounded-full border-8 border-primary border-t-tertiary-fixed-dim border-r-tertiary-fixed-dim border-b-primary border-l-primary rotate-45"></div>
+<div class="absolute inset-0 rounded-full border-8 border-transparent border-t-surface-container rotate-[220deg]"></div>
+<div class="w-24 h-24 bg-surface-container-lowest rounded-full flex flex-col items-center justify-center z-10">
+<span class="font-headline text-2xl font-bold text-primary">78%</span>
+<span class="font-body text-[10px] text-secondary uppercase tracking-widest">Covered</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="font-body text-sm text-secondary">Verified Source (60%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-tertiary-fixed-dim"></div>
+<span class="font-body text-sm text-secondary">Internal Doc (18%)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-surface-container"></div>
+<span class="font-body text-sm text-secondary">Uncited (22%)</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Card D: Percentage and sparkline for 'Next-step completion rate' -->
+<section class="bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden flex flex-col justify-between bg-gradient-to-br from-surface-container-lowest to-surface-container-low">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary-container"></div>
+<div class="flex justify-between items-start mb-4">
+<h2 class="font-headline text-xl font-bold text-primary">Next-step completion rate</h2>
+<span class="material-symbols-outlined text-primary-container">task_alt</span>
+</div>
+<div class="flex flex-col gap-4">
+<div class="flex items-baseline gap-3">
+<span class="font-headline text-5xl font-extrabold text-primary">84%</span>
+<span class="font-body text-sm font-medium text-secondary bg-surface-container px-2 py-1 rounded">+5% from last period</span>
+</div>
+<!-- CSS Sparkline representation -->
+<div class="h-16 w-full flex items-end justify-between gap-1 mt-4">
+<div class="w-full bg-primary-container/20 rounded-t-sm" style="height: 40%"></div>
+<div class="w-full bg-primary-container/30 rounded-t-sm" style="height: 55%"></div>
+<div class="w-full bg-primary-container/40 rounded-t-sm" style="height: 45%"></div>
+<div class="w-full bg-primary-container/50 rounded-t-sm" style="height: 60%"></div>
+<div class="w-full bg-primary-container/60 rounded-t-sm" style="height: 50%"></div>
+<div class="w-full bg-primary-container/70 rounded-t-sm" style="height: 75%"></div>
+<div class="w-full bg-primary-container/80 rounded-t-sm" style="height: 70%"></div>
+<div class="w-full bg-primary rounded-t-sm" style="height: 84%"></div>
+</div>
+<div class="flex justify-between text-xs text-secondary font-body mt-1">
+<span>Week 1</span>
+<span>Current</span>
+</div>
+</div>
+</section>
+</div>
+<!-- Full-width card: Recurring contradictions table -->
+<section class="bg-surface-container-lowest rounded-xl p-8 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div class="flex justify-between items-center mb-8">
+<div>
+<h2 class="font-headline text-xl font-bold text-primary mb-1">Recurring contradictions</h2>
+<p class="font-body text-sm text-secondary">Identified conflicting statements across multiple briefing documents.</p>
+</div>
+<button class="font-body text-sm font-semibold text-primary hover:text-primary-container transition-colors flex items-center gap-1">
+                        View All
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Table Structure -->
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body">
+<thead>
+<tr>
+<th class="pb-4 font-semibold text-secondary text-sm font-body uppercase tracking-wider w-1/3">Subject</th>
+<th class="pb-4 font-semibold text-secondary text-sm font-body uppercase tracking-wider w-1/4">Conflicting Sources</th>
+<th class="pb-4 font-semibold text-secondary text-sm font-body uppercase tracking-wider w-1/6">Frequency</th>
+<th class="pb-4 font-semibold text-secondary text-sm font-body uppercase tracking-wider text-right w-1/4">Status</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-low transition-colors">
+<td class="py-4 pr-4 align-top">
+<p class="font-semibold text-on-surface mb-1">Q4 Revenue Projections</p>
+<p class="text-secondary text-xs">Discrepancy between stated $14M and internal model showing $11.5M.</p>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="description">description</span> Board Deck v2
+                                        </span>
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="table_chart">table_chart</span> Finance Q3 Rpt
+                                        </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top text-on-surface">Detected in 4 briefs</td>
+<td class="py-4 pl-4 align-top text-right">
+<span class="text-error font-semibold text-xs border border-error/20 px-3 py-1 rounded-full bg-error-container/30">Unresolved</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-low transition-colors border-t border-surface-container-high">
+<td class="py-4 pr-4 align-top">
+<p class="font-semibold text-on-surface mb-1">Launch Timeline: Project Apex</p>
+<p class="text-secondary text-xs">Marketing briefs claim October launch; Engineering states December.</p>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="campaign">campaign</span> Mktg Strategy Doc
+                                        </span>
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="engineering">engineering</span> Eng Roadmap
+                                        </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top text-on-surface">Detected in 2 briefs</td>
+<td class="py-4 pl-4 align-top text-right">
+<span class="text-tertiary-fixed-dim font-semibold text-xs border border-tertiary-fixed-dim/20 px-3 py-1 rounded-full bg-tertiary-fixed/30">Under Review</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-low transition-colors border-t border-surface-container-high">
+<td class="py-4 pr-4 align-top">
+<p class="font-semibold text-on-surface mb-1">Key Partner Commitment</p>
+<p class="text-secondary text-xs">Stated 'exclusive terms' in executive summary; contract abstract shows non-exclusive.</p>
+</td>
+<td class="py-4 px-4 align-top">
+<div class="flex flex-col gap-1">
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="assignment">assignment</span> Exec Summary
+                                        </span>
+<span class="inline-flex items-center gap-1 text-xs text-primary bg-primary-fixed/30 px-2 py-0.5 rounded w-fit">
+<span class="material-symbols-outlined text-[10px]" data-icon="gavel">gavel</span> Legal Abstract
+                                        </span>
+</div>
+</td>
+<td class="py-4 px-4 align-top text-on-surface">Detected in 1 brief</td>
+<td class="py-4 pl-4 align-top text-right">
+<span class="text-secondary font-semibold text-xs border border-secondary/20 px-3 py-1 rounded-full bg-surface-container">Resolved</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</body></html>

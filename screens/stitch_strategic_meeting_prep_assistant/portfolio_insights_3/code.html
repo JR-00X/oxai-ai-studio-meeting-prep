@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio Insights - Executive Brief</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed": "#dbe2f7",
+                      "on-secondary-container": "#5b6374",
+                      "inverse-primary": "#bbc3ff",
+                      "surface-variant": "#e4e2de",
+                      "tertiary-fixed": "#ffdea4",
+                      "on-primary-fixed": "#0a144f",
+                      "surface-container-low": "#f5f3ef",
+                      "on-background": "#1b1c1a",
+                      "on-tertiary-fixed-variant": "#5d4200",
+                      "on-tertiary-fixed": "#261900",
+                      "on-surface": "#1b1c1a",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#dfe0ff",
+                      "primary-container": "#1e2761",
+                      "surface-container-high": "#eae8e4",
+                      "on-primary-fixed-variant": "#39427d",
+                      "secondary-fixed-dim": "#bfc6db",
+                      "on-secondary-fixed-variant": "#3f4757",
+                      "tertiary": "#221600",
+                      "surface-tint": "#515a96",
+                      "surface-bright": "#fbf9f5",
+                      "primary-fixed-dim": "#bbc3ff",
+                      "outline": "#767681",
+                      "on-secondary": "#ffffff",
+                      "outline-variant": "#c6c5d1",
+                      "background": "#fbf9f5",
+                      "primary": "#06104c",
+                      "inverse-on-surface": "#f2f0ed",
+                      "on-surface-variant": "#464650",
+                      "surface": "#fbf9f5",
+                      "on-tertiary": "#ffffff",
+                      "secondary": "#565e70",
+                      "on-primary-container": "#8790d0",
+                      "tertiary-container": "#3c2a00",
+                      "surface-container": "#efeeea",
+                      "surface-container-highest": "#e4e2de",
+                      "secondary-container": "#d8e0f4",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#bb8d24",
+                      "inverse-surface": "#30312e",
+                      "surface-dim": "#dbdad6",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "tertiary-fixed-dim": "#f3bf53",
+                      "on-secondary-fixed": "#141c2a",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": [
+                              "Manrope"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .fill-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 8px 40px rgba(27, 28, 26, 0.06);
+        }
+      </style>
+</head>
+<body class="bg-background font-body text-on-surface antialiased">
+<!-- SideNavBar (JSON Derived) -->
+<nav class="bg-[#fbf9f5] dark:bg-slate-950 h-screen w-64 fixed left-0 top-0 border-r-0 flex flex-col py-8 z-50">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-black text-[#06104c] dark:text-white font-manrope">Executive Brief</h1>
+<p class="text-sm text-secondary font-medium tracking-tight">Silent Partner</p>
+</div>
+<ul class="flex flex-col gap-2 font-manrope font-semibold tracking-tight">
+<li>
+<a class="text-[#565e70] dark:text-slate-400 px-6 py-4 flex items-center gap-3 opacity-80 hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="text-[#565e70] dark:text-slate-400 px-6 py-4 flex items-center gap-3 opacity-80 hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">description</span>
+                    Briefings
+                </a>
+</li>
+<li>
+<a class="text-[#565e70] dark:text-slate-400 px-6 py-4 flex items-center gap-3 opacity-80 hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined">history</span>
+                    History
+                </a>
+</li>
+<li>
+<a class="border-l-4 border-[#f3bf53] text-[#06104c] bg-[#efeeea] dark:bg-slate-800 font-bold px-6 py-4 flex items-center gap-3 translate-x-1 transition-all" href="#">
+<span class="material-symbols-outlined fill-icon text-[#06104c]">analytics</span>
+                    Analytics
+                </a>
+</li>
+</ul>
+<div class="mt-auto px-6">
+<button class="w-full bg-[#06104c] text-white rounded-lg py-3 px-4 font-manrope font-semibold hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                New Meeting
+            </button>
+</div>
+</nav>
+<!-- TopAppBar (JSON Derived) -->
+<header class="bg-[#fbf9f5]/80 dark:bg-slate-950/80 backdrop-blur-md fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-gradient-to-b from-[#fbf9f5] to-transparent flex justify-between items-center px-12 py-6">
+<div class="font-manrope font-bold text-[#06104c] dark:text-[#f3bf53]">
+            Meeting Intelligence
+        </div>
+<nav class="flex items-center gap-8 font-manrope text-sm uppercase tracking-widest text-[#565e70] dark:text-slate-400">
+<a class="hover:text-[#06104c] dark:hover:text-white transition-opacity" href="#">Directives</a>
+<a class="hover:text-[#06104c] dark:hover:text-white transition-opacity" href="#">Sync Settings</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="font-manrope text-sm font-semibold bg-tertiary-fixed-dim text-tertiary px-5 py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+                Generate Prep
+            </button>
+<div class="flex items-center gap-4 text-[#565e70]">
+<button class="hover:text-[#06104c] transition-colors"><span class="material-symbols-outlined">notifications</span></button>
+<button class="hover:text-[#06104c] transition-colors"><span class="material-symbols-outlined">settings</span></button>
+<img alt="Executive User" class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a confident corporate executive in a sharp suit, warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-n2c2nXHFFhxUiJKJyo5Wd3VwYSd3lkTsbxrjShpj0fM4yT2G_NIxkBvZ-JYGidmCF1SlyLzxqxkpsIhrxMVLBsJDRSUPjEwE1B30OP_KszA08eLQyM0vprQRUchU3AHIQzhoO4i24-AGF9ZYTDUnbOuqVI1TVU1GKStTpqfowv9Y0Fs82z-pcMZAZZpGjqgKtO_Nqam3E-_prCUzB6sstQw6mPBIAxCrpvM6wj7SDEM6RUXqVHPK2HDlW3d5AihA68tEj59eMh2P"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 mt-[96px] p-12 min-h-screen">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h1 class="font-headline font-extrabold text-[3.5rem] leading-tight text-primary tracking-tight mb-2">Portfolio insights</h1>
+<p class="text-secondary text-lg">Patterns across your last 90 days of briefings.</p>
+</div>
+<div class="flex flex-col items-end gap-6">
+<div class="flex items-center gap-4">
+<button class="text-secondary hover:text-primary font-manrope font-semibold text-sm flex items-center gap-2 transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+                        Share
+                    </button>
+<button class="bg-secondary-container text-primary font-manrope font-semibold text-sm px-4 py-2 rounded-lg flex items-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+                        Export PDF
+                    </button>
+</div>
+<!-- Period Selector -->
+<div class="flex bg-surface-container rounded-full p-1 border-none">
+<button class="px-6 py-2 rounded-full text-sm font-medium text-secondary hover:text-primary transition-colors">30 days</button>
+<button class="px-6 py-2 rounded-full text-sm font-semibold bg-primary text-white shadow-sm transition-all">90 days</button>
+<button class="px-6 py-2 rounded-full text-sm font-medium text-secondary hover:text-primary transition-colors">12 months</button>
+</div>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Card: Deals most at risk (Col-Span 2) -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-[1.5rem] p-8 ambient-shadow relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-error"></div>
+<div class="flex justify-between items-start mb-8">
+<h2 class="font-headline font-bold text-2xl text-primary">Deals most at risk</h2>
+<button class="text-primary font-manrope text-sm font-bold underline decoration-tertiary-fixed-dim underline-offset-4 hover:opacity-70 transition-opacity">View all</button>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Client Item -->
+<div class="flex justify-between items-center p-4 rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+<div>
+<h3 class="font-bold text-primary text-lg mb-1">Acme Corp - Enterprise Renewal</h3>
+<p class="text-sm text-secondary">Exec Sponsor left • SLA disputes pending</p>
+</div>
+<div class="flex items-center gap-6">
+<span class="bg-error-container text-on-error-container text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">High Risk</span>
+<a class="text-primary hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1 font-semibold text-sm" href="#">
+                                Review briefing
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Client Item -->
+<div class="flex justify-between items-center p-4 rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+<div>
+<h3 class="font-bold text-primary text-lg mb-1">Globex Logistics Q3 Expand</h3>
+<p class="text-sm text-secondary">Competitor engaged • Budget cuts reported</p>
+</div>
+<div class="flex items-center gap-6">
+<span class="bg-error-container text-on-error-container text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">High Risk</span>
+<a class="text-primary hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1 font-semibold text-sm" href="#">
+                                Review briefing
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Client Item -->
+<div class="flex justify-between items-center p-4 rounded-xl bg-surface hover:bg-surface-container-low transition-colors">
+<div>
+<h3 class="font-bold text-primary text-lg mb-1">Stark Industries Phase 2</h3>
+<p class="text-sm text-secondary">Timeline misaligned • Technical blockers</p>
+</div>
+<div class="flex items-center gap-6">
+<span class="bg-[#fff3cd] text-[#856404] text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">Elevated</span>
+<a class="text-primary hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1 font-semibold text-sm" href="#">
+                                Review briefing
+                                <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Citation Coverage -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-8 ambient-shadow relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim"></div>
+<h2 class="font-headline font-bold text-xl text-primary mb-8">Citation coverage</h2>
+<div class="flex flex-col items-center justify-center h-full pb-8">
+<!-- Donut Chart Visual -->
+<div class="relative w-48 h-48 rounded-full mb-8" style="background: conic-gradient(#06104c 0% 68%, #e4e2de 68% 100%);">
+<div class="absolute inset-4 bg-surface-container-lowest rounded-full flex flex-col items-center justify-center">
+<span class="font-headline font-black text-4xl text-primary tracking-tighter">68%</span>
+<span class="text-xs text-secondary uppercase tracking-widest mt-1">Verified</span>
+</div>
+</div>
+<div class="w-full flex justify-between px-4">
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-primary"></div>
+<span class="text-sm text-secondary font-medium">Notes &amp; CRM</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-3 h-3 rounded-full bg-surface-variant"></div>
+<span class="text-sm text-secondary font-medium">Slides/Decks</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Card: Most common risk categories -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-[1.5rem] p-8 ambient-shadow">
+<h2 class="font-headline font-bold text-xl text-primary mb-8">Most common risk categories</h2>
+<div class="flex flex-col gap-5">
+<!-- Bar Chart Item -->
+<div class="grid grid-cols-12 items-center gap-4">
+<div class="col-span-3 text-sm font-medium text-secondary truncate">Pricing pressure</div>
+<div class="col-span-8 h-8 bg-surface-container rounded-r-full overflow-hidden flex">
+<div class="bg-primary h-full rounded-r-full transition-all duration-1000 w-[85%]"></div>
+</div>
+<div class="col-span-1 text-right text-sm font-bold text-primary">85%</div>
+</div>
+<!-- Bar Chart Item -->
+<div class="grid grid-cols-12 items-center gap-4">
+<div class="col-span-3 text-sm font-medium text-secondary truncate">SLA breach</div>
+<div class="col-span-8 h-8 bg-surface-container rounded-r-full overflow-hidden flex">
+<div class="bg-primary-container h-full rounded-r-full transition-all duration-1000 w-[62%]"></div>
+</div>
+<div class="col-span-1 text-right text-sm font-bold text-primary">62%</div>
+</div>
+<!-- Bar Chart Item -->
+<div class="grid grid-cols-12 items-center gap-4">
+<div class="col-span-3 text-sm font-medium text-secondary truncate">Exec turnover</div>
+<div class="col-span-8 h-8 bg-surface-container rounded-r-full overflow-hidden flex">
+<div class="bg-surface-tint h-full rounded-r-full transition-all duration-1000 w-[45%]"></div>
+</div>
+<div class="col-span-1 text-right text-sm font-bold text-primary">45%</div>
+</div>
+<!-- Bar Chart Item -->
+<div class="grid grid-cols-12 items-center gap-4">
+<div class="col-span-3 text-sm font-medium text-secondary truncate">Feature gap</div>
+<div class="col-span-8 h-8 bg-surface-container rounded-r-full overflow-hidden flex">
+<div class="bg-secondary-fixed-dim h-full rounded-r-full transition-all duration-1000 w-[28%]"></div>
+</div>
+<div class="col-span-1 text-right text-sm font-bold text-primary">28%</div>
+</div>
+</div>
+</div>
+<!-- Card: Next-step completion rate -->
+<div class="bg-surface-container-lowest rounded-[1.5rem] p-8 ambient-shadow relative overflow-hidden">
+<div class="absolute right-0 top-0 bg-primary-fixed w-32 h-32 rounded-full blur-3xl opacity-30 -mr-10 -mt-10"></div>
+<h2 class="font-headline font-bold text-xl text-primary mb-2">Next-step completion</h2>
+<p class="text-sm text-secondary mb-6">Trailing 6 weeks trend</p>
+<div class="flex flex-col h-full justify-between pb-4">
+<div class="font-headline font-black text-[4rem] leading-none text-primary tracking-tighter mb-8">
+                        84<span class="text-3xl text-tertiary-fixed-dim">%</span>
+</div>
+<!-- Sparkline Concept using flex bars -->
+<div class="flex items-end gap-2 h-16 w-full opacity-80">
+<div class="w-full bg-surface-container rounded-t-sm h-[40%]"></div>
+<div class="w-full bg-surface-container rounded-t-sm h-[45%]"></div>
+<div class="w-full bg-surface-container rounded-t-sm h-[60%]"></div>
+<div class="w-full bg-surface-container rounded-t-sm h-[55%]"></div>
+<div class="w-full bg-primary-container rounded-t-sm h-[75%]"></div>
+<div class="w-full bg-primary rounded-t-sm h-[90%]"></div>
+</div>
+</div>
+</div>
+<!-- Full-width Card: Recurring contradictions -->
+<div class="lg:col-span-3 bg-surface-container-lowest rounded-[1.5rem] p-8 ambient-shadow mt-4">
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline font-bold text-2xl text-primary mb-1">Recurring contradictions</h2>
+<p class="text-secondary text-sm">Discrepancies found between internal notes and client-facing materials.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-manrope font-semibold text-sm hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                        Filter
+                    </button>
+</div>
+<div class="w-full">
+<!-- Table Header -->
+<div class="grid grid-cols-12 gap-4 pb-4 border-b-4 border-surface text-sm text-secondary font-medium uppercase tracking-wider">
+<div class="col-span-5">Contradiction Type</div>
+<div class="col-span-2">Frequency</div>
+<div class="col-span-5">Impacted Deals (Sample)</div>
+</div>
+<!-- Table Rows (Vertical Whitespace, No 1px lines) -->
+<div class="flex flex-col">
+<div class="grid grid-cols-12 gap-4 py-5 items-center border-b-[4px] border-surface">
+<div class="col-span-5 font-bold text-primary">Deck vs Support Reality</div>
+<div class="col-span-2 text-secondary font-medium">14 times</div>
+<div class="col-span-5 text-sm text-secondary truncate">Acme Corp, Globex Logistics, Initech</div>
+</div>
+<div class="grid grid-cols-12 gap-4 py-5 items-center border-b-[4px] border-surface">
+<div class="col-span-5 font-bold text-primary">Pricing SLA vs Contract</div>
+<div class="col-span-2 text-secondary font-medium">9 times</div>
+<div class="col-span-5 text-sm text-secondary truncate">Stark Industries, Wayne Ent</div>
+</div>
+<div class="grid grid-cols-12 gap-4 py-5 items-center">
+<div class="col-span-5 font-bold text-primary">Timeline vs Resource Avail</div>
+<div class="col-span-2 text-secondary font-medium">6 times</div>
+<div class="col-span-5 text-sm text-secondary truncate">Massive Dynamic, Cyberdyne Systems</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

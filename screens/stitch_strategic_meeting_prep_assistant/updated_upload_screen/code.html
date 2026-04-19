@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Meeting Prep - Upload Documents</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "surface": "#fbf9f5",
+                        "surface-tint": "#515a96",
+                        "on-tertiary-container": "#bb8d24",
+                        "secondary": "#565e70",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#d8e0f4",
+                        "surface-container-low": "#f5f3ef",
+                        "surface-container": "#efeeea",
+                        "tertiary": "#221600",
+                        "on-secondary-fixed-variant": "#3f4757",
+                        "on-surface-variant": "#464650",
+                        "on-surface": "#1b1c1a",
+                        "inverse-surface": "#30312e",
+                        "primary-fixed": "#dfe0ff",
+                        "secondary-fixed-dim": "#bfc6db",
+                        "primary": "#06104c",
+                        "inverse-primary": "#bbc3ff",
+                        "secondary-fixed": "#dbe2f7",
+                        "surface-dim": "#dbdad6",
+                        "surface-bright": "#fbf9f5",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-background": "#1b1c1a",
+                        "on-tertiary-fixed": "#261900",
+                        "primary-container": "#1e2761",
+                        "on-primary-container": "#8790d0",
+                        "surface-container-high": "#eae8e4",
+                        "background": "#fbf9f5",
+                        "tertiary-fixed-dim": "#f3bf53",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#ffdea4",
+                        "outline": "#767681",
+                        "on-primary-fixed-variant": "#39427d",
+                        "on-primary-fixed": "#0a144f",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f2f0ed",
+                        "surface-variant": "#e4e2de",
+                        "surface-container-highest": "#e4e2de",
+                        "outline-variant": "#c6c5d1",
+                        "on-secondary-fixed": "#141c2a",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-container": "#3c2a00",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "on-secondary-container": "#5b6374"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body min-h-screen flex selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed">
+<!-- SideNavBar -->
+<nav class="bg-[#fbf9f5] text-[#06104c] font-['Inter'] text-sm font-medium h-screen w-72 flex flex-col fixed left-0 top-0 shadow-[40px_0_60px_-15px_rgba(27,28,26,0.06)] z-20">
+<div class="flex flex-col gap-2 py-8 pr-4">
+<div class="px-8 pb-6">
+<div class="font-['Manrope'] font-bold text-[#06104c] text-xl tracking-tight">Executive Brief</div>
+<div class="text-secondary text-xs mt-1">The Silent Partner</div>
+</div>
+<div class="px-8 mb-6">
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-medium flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-sm">add</span>
+                    New Prep Session
+                </button>
+</div>
+<div class="bg-[#efeeea] h-px w-full my-4"></div>
+<ul class="flex flex-col gap-1 w-full">
+<!-- Active Item -->
+<li>
+<a class="flex items-center gap-3 py-3 text-[#06104c] font-bold border-l-4 border-[#f3bf53] pl-4 bg-[#efeeea] transition-all duration-300 rounded-r-lg" href="#">
+<span class="material-symbols-outlined icon-fill" data-icon="dashboard">dashboard</span>
+                        Briefing Room
+                    </a>
+</li>
+<!-- Inactive Items -->
+<li>
+<a class="flex items-center gap-3 py-3 text-[#565e70] pl-5 hover:text-[#06104c] hover:bg-[#efeeea] transition-all duration-300 rounded-r-lg" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span>
+                        Document Library
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 text-[#565e70] pl-5 hover:text-[#06104c] hover:bg-[#efeeea] transition-all duration-300 rounded-r-lg" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+                        Meeting History
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 text-[#565e70] pl-5 hover:text-[#06104c] hover:bg-[#efeeea] transition-all duration-300 rounded-r-lg mt-8" href="#">
+<span class="material-symbols-outlined" data-icon="settings_account_box">settings_account_box</span>
+                        Executive Settings
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 ml-72 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-[#fbf9f5] text-[#06104c] font-['Manrope'] font-semibold tracking-tight w-full top-0 sticky z-10 transition-all duration-200 ease-in-out border-b border-[#efeeea]/50">
+<div class="flex justify-between items-center h-16 px-12 w-full">
+<div class="text-lg font-extrabold uppercase tracking-widest text-[#06104c]">
+                    Meeting Prep
+                </div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<button class="text-[#565e70] hover:bg-[#efeeea] p-2 rounded-full transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-[#565e70] hover:bg-[#efeeea] p-2 rounded-full transition-all duration-200 flex items-center justify-center">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="h-9 w-9 rounded-full bg-primary-container flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="person">person</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Canvas -->
+<main class="flex-1 w-full flex flex-col items-center py-16 px-8 md:px-16 overflow-y-auto">
+<div class="w-full max-w-3xl flex flex-col items-center">
+<!-- Hero Section -->
+<div class="text-center mb-16 max-w-2xl">
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-tight mb-6">
+                        Prepare for your next meeting in 30 seconds
+                    </h1>
+<p class="font-body text-lg text-secondary leading-relaxed">
+                        Upload your internal notes, decks, or any relevant documents. We surface risks, talking points, and next steps — with citations.
+                    </p>
+</div>
+<!-- Single Large Upload Zone -->
+<div class="w-full bg-surface-container-low border-2 border-dashed border-outline-variant/20 rounded-2xl p-16 flex flex-col items-center justify-center text-center transition-all duration-300 hover:bg-primary-fixed/30 hover:border-primary/30 group cursor-pointer">
+<div class="w-20 h-20 rounded-full bg-surface flex items-center justify-center mb-6 shadow-sm group-hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-4xl text-primary icon-fill" data-icon="file_copy">file_copy</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-on-surface mb-2">Drag &amp; drop files here</h3>
+<p class="font-body text-secondary mb-6">
+                        or <button class="text-primary font-medium hover:underline focus:outline-none">browse from your computer</button>
+</p>
+<div class="text-xs text-outline font-medium tracking-wide uppercase">
+                        Supports PDF, DOCX, PPTX (Max 50MB)
+                    </div>
+</div>
+<!-- Collapsible Context Section -->
+<div class="w-full mt-8">
+<details class="w-full group bg-surface-container-lowest rounded-xl overflow-hidden transition-all duration-300 shadow-[0_20px_40px_-15px_rgba(27,28,26,0.03)] border border-outline-variant/10">
+<summary class="flex items-center justify-between p-6 cursor-pointer select-none">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary group-open:text-primary transition-colors" data-icon="tune">tune</span>
+<span class="font-body font-semibold text-on-surface">Meeting context (optional)</span>
+</div>
+<span class="material-symbols-outlined text-secondary group-open:rotate-180 transition-transform duration-300" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="p-6 pt-0 border-t border-surface-container/50">
+<label class="block mb-2 text-sm font-medium text-secondary">What is the primary goal of this meeting?</label>
+<textarea class="w-full bg-surface-container border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all font-body resize-none h-24" placeholder="e.g., Secure budget approval for Q3 marketing initiatives..."></textarea>
+<div class="mt-6 flex gap-4">
+<div class="flex-1">
+<label class="block mb-2 text-sm font-medium text-secondary">Key Attendees</label>
+<input class="w-full bg-surface-container border-none rounded-lg p-4 text-on-surface focus:ring-2 focus:ring-primary/20 transition-all font-body" placeholder="e.g., Jane Doe (CFO)" type="text"/>
+</div>
+</div>
+</div>
+</details>
+</div>
+<!-- Primary CTA -->
+<div class="mt-16 flex justify-center w-full">
+<button class="bg-tertiary-fixed-dim text-on-tertiary-fixed font-headline font-bold text-lg px-12 py-5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex items-center gap-3">
+                        Prepare my meeting
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

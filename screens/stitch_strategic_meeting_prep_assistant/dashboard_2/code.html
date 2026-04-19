@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Executive Brief - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#0a144f",
+                        "surface-tint": "#515a96",
+                        "on-error-container": "#93000a",
+                        "secondary-container": "#d8e0f4",
+                        "surface-bright": "#fbf9f5",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed-dim": "#f3bf53",
+                        "outline": "#767681",
+                        "tertiary": "#221600",
+                        "surface-dim": "#dbdad6",
+                        "primary": "#06104c",
+                        "primary-container": "#1e2761",
+                        "on-primary-fixed-variant": "#39427d",
+                        "primary-fixed-dim": "#bbc3ff",
+                        "surface-container-low": "#f5f3ef",
+                        "secondary-fixed-dim": "#bfc6db",
+                        "surface-container-high": "#eae8e4",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#141c2a",
+                        "on-tertiary-container": "#bb8d24",
+                        "secondary": "#565e70",
+                        "on-primary-container": "#8790d0",
+                        "tertiary-container": "#3c2a00",
+                        "surface": "#fbf9f5",
+                        "background": "#fbf9f5",
+                        "surface-variant": "#e4e2de",
+                        "secondary-fixed": "#dbe2f7",
+                        "primary-fixed": "#dfe0ff",
+                        "outline-variant": "#c6c5d1",
+                        "inverse-on-surface": "#f2f0ed",
+                        "on-secondary-container": "#5b6374",
+                        "on-surface-variant": "#464650",
+                        "on-secondary-fixed-variant": "#3f4757",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "on-surface": "#1b1c1a",
+                        "on-error": "#ffffff",
+                        "surface-container-highest": "#e4e2de",
+                        "surface-container": "#efeeea",
+                        "tertiary-fixed": "#ffdea4",
+                        "inverse-surface": "#30312e",
+                        "on-background": "#1b1c1a",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bbc3ff",
+                        "on-tertiary-fixed": "#261900"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: theme('colors.background'); color: theme('colors.on-surface'); }
+        h1, h2, h3, h4, h5, h6, .font-headline { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full py-8 w-64 fixed left-0 top-0 border-r-0 bg-[#fbf9f5] dark:bg-slate-950 z-50">
+<div class="px-6 mb-12">
+<div class="flex items-center gap-3">
+<img alt="Executive User Portrait" class="w-10 h-10 rounded-full object-cover shadow-sm ring-2 ring-surface-container-high" data-alt="Close-up portrait of a professional executive in a dark tailored suit, subtle lighting, dark background, confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxFOmWJxZgH2WZubhWdz9Nby7DDXxAJKI8wSF6o3yBE1RSVwo8iJVRHMdS_kq8lrvHI6hQEKCrfpydxE0Y50csn2Div0EOdmD6Rr9CWf6ptS7ZPUG50u0OP09IB6D_N_QEm4CW32OWQKkaz4C_87QOlhwrmc7g8ndEhciVr8enPkqYzCoUIz3TUbKlO2yVS6SHbJSpxGiaF8PUk1JXgh2tHqsKa9spfLpOB2nOx4B-c_vgQJ5XjkxpBNx1h30g5xS6ShZ11qjWUER7"/>
+<div>
+<h2 class="text-lg font-bold text-[#06104c] dark:text-slate-50 tracking-tighter font-headline leading-tight">Executive Brief</h2>
+<p class="text-xs text-secondary font-medium tracking-wide">The Silent Partner</p>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col gap-2 font-['Manrope'] text-sm tracking-tight pl-0">
+<!-- Active Tab: Dashboard -->
+<a class="flex items-center gap-4 text-[#06104c] dark:text-white font-bold bg-[#efeeea] dark:bg-slate-800 border-l-4 border-[#f3bf53] py-3 px-6 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4 shadow-sm" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-4 text-[#565e70] dark:text-slate-400 font-medium py-3 px-6 hover:text-[#06104c] hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4" href="#">
+<span class="material-symbols-outlined">description</span>
+<span>Briefings</span>
+</a>
+<a class="flex items-center gap-4 text-[#565e70] dark:text-slate-400 font-medium py-3 px-6 hover:text-[#06104c] hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span>Meetings</span>
+</a>
+<a class="flex items-center gap-4 text-[#565e70] dark:text-slate-400 font-medium py-3 px-6 hover:text-[#06104c] hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4" href="#">
+<span class="material-symbols-outlined">warning</span>
+<span>Risks</span>
+</a>
+</div>
+<div class="mt-auto flex flex-col gap-2 font-['Manrope'] text-sm tracking-tight">
+<a class="flex items-center gap-4 text-[#565e70] dark:text-slate-400 font-medium py-3 px-6 hover:text-[#06104c] hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+<a class="flex items-center gap-4 text-[#565e70] dark:text-slate-400 font-medium py-3 px-6 hover:text-[#06104c] hover:bg-[#efeeea] dark:hover:bg-slate-800 transition-all duration-200 ease-in-out transform active:scale-95 rounded-r-full mr-4" href="#">
+<span class="material-symbols-outlined">help_outline</span>
+<span>Support</span>
+</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 relative bg-surface h-full overflow-y-auto">
+<!-- TopAppBar -->
+<header class="sticky top-0 right-0 w-full z-40 bg-[#fbf9f5]/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-transparent flex justify-between items-center px-8 md:px-12 h-20 transition-all">
+<div class="flex items-center">
+<h1 class="text-xl text-[#06104c] dark:text-white font-bold font-headline tracking-tight md:hidden">Executive Brief</h1>
+<span class="hidden md:block text-lg font-semibold text-[#06104c] dark:text-blue-100 font-headline tracking-tight border-b-2 border-[#f3bf53] pb-1">Dashboard</span>
+</div>
+<div class="flex items-center gap-6">
+<!-- Search Bar Placeholder for "on_right" logic -->
+<div class="hidden lg:flex items-center bg-surface-container-highest rounded-full px-4 py-2 opacity-80 hover:opacity-100 transition-opacity focus-within:ring-2 focus-within:ring-primary-container">
+<span class="material-symbols-outlined text-secondary mr-2 text-sm">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48 text-primary placeholder-secondary font-body" placeholder="Search dossiers..." type="text"/>
+</div>
+<div class="flex items-center gap-4 text-[#06104c] dark:text-blue-100">
+<button class="hover:opacity-80 transition-opacity ease-in-out transform active:scale-95 relative p-2 rounded-full hover:bg-surface-container-low">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full ring-2 ring-surface"></span>
+</button>
+<button class="hover:opacity-80 transition-opacity ease-in-out transform active:scale-95 p-2 rounded-full hover:bg-surface-container-low hidden sm:block">
+<span class="material-symbols-outlined">history</span>
+</button>
+<button class="hover:opacity-80 transition-opacity ease-in-out transform active:scale-95 p-2 rounded-full hover:bg-surface-container-low md:hidden">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<div class="px-6 md:px-12 py-8 max-w-7xl mx-auto space-y-12 pb-32">
+<!-- Hero Header Section -->
+<section class="space-y-4">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-r from-primary to-primary-container p-8 text-on-primary shadow-sm h-48 flex flex-col justify-end">
+<div class="absolute inset-0 opacity-10 mix-blend-overlay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDIIBRdFwXUfW4iVD-_hB8urKIw1A7yzwG29O8-t3V6nNkiz0EK3O4Prle9bnFRtft4hyYI-p5Lf8w4FYmvNOiZiqkkMVeR4WbBMjp_b9DCgCHwZPVI4RE2WxmjiJlJGnx6KPTpiW2WeO-pit67hWKPUCtCJpLJWJY2mOgcGOkre6oMmVZpG24slDK0l4YjikhWyRpSGwhCx0moxmxiz5mV8iY2fja0eX6a08RezNhFeZlwtz0m0rJmGeFwD_X7JExFIlXlpSL9PU4r'); background-size: cover; background-position: center;"></div>
+<div class="relative z-10">
+<h1 class="text-4xl md:text-5xl font-extrabold font-headline tracking-tight mb-2">Welcome back, Alex</h1>
+<p class="text-lg md:text-xl font-medium text-primary-fixed-dim">You have 3 meetings to prepare this week.</p>
+</div>
+</div>
+</section>
+<!-- Stat Row (Bento Style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_4px_40px_-10px_rgba(27,28,26,0.06)] flex flex-col justify-between group hover:bg-surface-container-low transition-colors duration-300">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold text-secondary uppercase tracking-wider font-body">Prepared</span>
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">description</span>
+</div>
+</div>
+<div>
+<span class="text-4xl font-extrabold font-headline text-primary">12</span>
+<p class="text-sm text-secondary mt-1">meetings this month</p>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_4px_40px_-10px_rgba(27,28,26,0.06)] flex flex-col justify-between group hover:bg-surface-container-low transition-colors duration-300">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold text-secondary uppercase tracking-wider font-body">Open Risks</span>
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-sm">warning</span>
+</div>
+</div>
+<div>
+<span class="text-4xl font-extrabold font-headline text-primary">5</span>
+<p class="text-sm text-secondary mt-1">across active briefings</p>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_4px_40px_-10px_rgba(27,28,26,0.06)] flex flex-col justify-between group hover:bg-surface-container-low transition-colors duration-300">
+<div class="flex items-center justify-between mb-4">
+<span class="text-sm font-semibold text-secondary uppercase tracking-wider font-body">Completion</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+</div>
+</div>
+<div>
+<span class="text-4xl font-extrabold font-headline text-primary">94%</span>
+<p class="text-sm text-secondary mt-1">next-step rate this quarter</p>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Main Priority Column -->
+<section class="lg:col-span-2 space-y-6">
+<h2 class="text-2xl font-bold font-headline text-primary border-b border-transparent">Coming up this week</h2>
+<div class="space-y-4">
+<!-- Meeting Card 1 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_40px_-12px_rgba(27,28,26,0.08)] relative overflow-hidden flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 group">
+<!-- Left Edge Status Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-tertiary-fixed-dim"></div>
+<div class="flex-1 space-y-2 ml-2">
+<h3 class="text-lg font-bold font-headline text-primary leading-tight">Acme Corp Q3 Review</h3>
+<div class="flex items-center text-sm text-secondary font-medium gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 24 • 10:00 AM</span>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-xs text-secondary font-semibold uppercase">Severity:</span>
+<div class="flex gap-2">
+<span class="bg-error-container text-on-error-container text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">priority_high</span>2H</span>
+<span class="bg-surface-variant text-on-surface-variant text-xs font-bold px-2 py-0.5 rounded-full">1M</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary text-on-primary text-sm font-semibold rounded-lg hover:bg-primary-container transition-colors shadow-sm whitespace-nowrap group-hover:shadow-md" href="#">
+                                Continue prep
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Meeting Card 2 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_40px_-12px_rgba(27,28,26,0.08)] relative overflow-hidden flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 group">
+<!-- Left Edge Status Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary"></div>
+<div class="flex-1 space-y-2 ml-2">
+<h3 class="text-lg font-bold font-headline text-primary leading-tight">Stark Ind. Partnership Sync</h3>
+<div class="flex items-center text-sm text-secondary font-medium gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 25 • 2:00 PM</span>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-xs text-secondary font-semibold uppercase">Severity:</span>
+<div class="flex gap-2">
+<span class="bg-error-container text-on-error-container text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">priority_high</span>1H</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface-container text-primary text-sm font-semibold rounded-lg hover:bg-surface-container-high transition-colors shadow-sm whitespace-nowrap" href="#">
+                                Continue prep
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Meeting Card 3 -->
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_8px_40px_-12px_rgba(27,28,26,0.08)] relative overflow-hidden flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 group">
+<!-- Left Edge Status Bar -->
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-surface-variant"></div>
+<div class="flex-1 space-y-2 ml-2">
+<h3 class="text-lg font-bold font-headline text-primary leading-tight">Globex Initial Pitch</h3>
+<div class="flex items-center text-sm text-secondary font-medium gap-2">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>Oct 27 • 9:30 AM</span>
+</div>
+<div class="flex items-center gap-3 mt-2">
+<span class="text-xs text-secondary font-semibold uppercase">Severity:</span>
+<div class="flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-xs font-bold px-2 py-0.5 rounded-full">3M</span>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-surface-container text-primary text-sm font-semibold rounded-lg hover:bg-surface-container-high transition-colors shadow-sm whitespace-nowrap" href="#">
+                                Continue prep
+                                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Secondary Column -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold font-headline text-primary">Recent briefings</h2>
+<a class="text-sm font-semibold text-primary hover:text-tertiary-fixed-dim transition-colors flex items-center gap-1 group" href="#">
+                            View all
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 shadow-[0_4px_40px_-10px_rgba(27,28,26,0.06)] flex flex-col gap-6">
+<!-- Mini Row 1 -->
+<a class="group flex items-start gap-4 p-2 -m-2 rounded-xl hover:bg-surface-container-low transition-colors" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">folder_open</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm font-headline group-hover:text-primary-container">Wayne Ent. Renewal</h4>
+<p class="text-xs text-secondary mt-0.5">Updated 2h ago</p>
+</div>
+</a>
+<!-- Mini Row 2 -->
+<a class="group flex items-start gap-4 p-2 -m-2 rounded-xl hover:bg-surface-container-low transition-colors" href="#">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm font-headline group-hover:text-primary-container">Initech Post-Mortem</h4>
+<p class="text-xs text-secondary mt-0.5">Updated 1d ago</p>
+</div>
+</a>
+<!-- Mini Row 3 -->
+<a class="group flex items-start gap-4 p-2 -m-2 rounded-xl hover:bg-surface-container-low transition-colors" href="#">
+<div class="w-10 h-10 rounded-lg bg-surface-container text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<h4 class="font-bold text-primary text-sm font-headline group-hover:text-primary-container">Massive Dynamic Onboarding</h4>
+<p class="text-xs text-secondary mt-0.5">Updated 3d ago</p>
+</div>
+</a>
+</div>
+<!-- Quick Action Glassmorphism Card Placeholder for extra design flair -->
+<div class="mt-8 rounded-2xl bg-surface-bright/60 backdrop-blur-md p-6 border border-outline-variant/15 shadow-sm">
+<div class="flex items-center gap-3 mb-3">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h3 class="font-bold text-primary font-headline">AI Prep Suggestions</h3>
+</div>
+<p class="text-sm text-secondary mb-4">Your model recommends reviewing the Q2 financial addendum for Acme Corp before your meeting.</p>
+<button class="text-sm font-semibold text-primary underline decoration-tertiary-fixed-dim underline-offset-4 hover:text-primary-container">Review addendum</button>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>
