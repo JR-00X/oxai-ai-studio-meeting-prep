@@ -1,0 +1,74 @@
+{
+  "meeting_summary": {
+    "context": "Q1 2026 Quarterly Business Review for Acme Corp, a mid-market SaaS customer ($1.2M ARR) currently 18 months into their contract with a renewal approaching in 90 days.",
+    "headline": "Defensive Renewal Strategy: Balancing Strong Usage Growth Against Support Breaches and Pricing Pressure",
+    "participant_snapshot": "Sarah Chen (VP Data/Champion), Marcus Webb (CTO/Silent Skeptic), Elena Rodriguez (CFO/Unprompted Attendee), and Dev Patel (New Head of Data Science)."
+  },
+  "risks": [
+    {
+      "risk": "CFO Intervention and Pricing Pressure",
+      "severity": "High",
+      "evidence": "Elena Rodriguez (CFO) has joined the last 2 calls unprompted and requested usage-based pricing comparisons; Procurement is now CC'd on all emails.",
+      "mitigation": "Lead with the 3-year locked-in rate proposal to provide budget certainty and address the 'pricing flexibility' ask before it becomes a demand for a discount."
+    },
+    {
+      "risk": "SLA Breach on P1 Tickets",
+      "severity": "High",
+      "evidence": "Two P1 tickets last month took 48 hours to resolve vs. 24 hour SLA; Marcus (CTO) was personally on one of these tickets.",
+      "mitigation": "Acknowledge the breach proactively during the Support slide. Do not hide behind the '18h average' metric; explain the root cause and the fix to prevent recurrence."
+    },
+    {
+      "risk": "Competitive Incursion",
+      "severity": "Medium",
+      "evidence": "Sarah mentioned outreach from [Competitor X] and played it 'cool', suggesting exploratory conversations may be happening.",
+      "mitigation": "Highlight the 2026 roadmap (Anomaly Detection/LLM) to show long-term platform value that would be lost in a migration."
+    },
+    {
+      "risk": "Internal Team Instability",
+      "severity": "Medium",
+      "evidence": "Unofficial reports of layoffs in Dev Patel's Data Science team (3 of 8 people) and low engagement (3/12) in recent analyst training.",
+      "mitigation": "Position the product as a force-multiplier for a leaner team; focus on 'reduced analytics team time' (2.4x ROI) to justify the spend during headcount freezes."
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Efficiency Gains via Automation",
+      "angle": "Operational Efficiency",
+      "evidence": "2.4x ROI through reduced manual team time despite +12% MAU growth and +38% query growth.",
+      "why_it_lands": "Directly addresses the CFO's likely concern about costs and the reality of their recent team layoffs."
+    },
+    {
+      "topic": "Strategic Roadmap Alignment",
+      "angle": "Future-Proofing",
+      "evidence": "H1/H2 2026 features including Anomaly Detection and Native LLM integration.",
+      "why_it_lands": "The meeting invite was changed to 'QBR + Roadmap'; this content satisfies the specific request that was likely driven by Marcus or Elena."
+    },
+    {
+      "topic": "Renewal and Expansion",
+      "angle": "Partnership Stability",
+      "evidence": "Proposed 3-year renewal with price certainty and EMEA business unit rollout.",
+      "why_it_lands": "Blocks the 'usage-based' pricing trap by offering long-term stability and aligns with their potential requirement for multi-region data residency."
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "Provide formal quote for Custom Data Export Format",
+      "owner": "Account Manager",
+      "deadline": "2026-04-15",
+      "dependency": "Product/Engineering scoping confirmation"
+    },
+    {
+      "action": "Confirm SOC 2 Type II requirement status with Sarah",
+      "owner": "Account Manager",
+      "deadline": "2026-04-10",
+      "dependency": null
+    },
+    {
+      "action": "Schedule 1:1 with Dev Patel to understand Data Science team needs post-layoffs",
+      "owner": "Account Manager",
+      "deadline": "2026-04-20",
+      "dependency": null
+    }
+  ],
+  "cover_image_prompt": "A professional and sleek digital dashboard showing rising growth charts and a shield icon representing reliability, in a color palette of deep navy and gold, symbolizing a high-stakes corporate quarterly business review."
+}
