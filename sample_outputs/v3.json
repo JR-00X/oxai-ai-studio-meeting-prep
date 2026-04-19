@@ -1,0 +1,74 @@
+{
+  "meeting_summary": {
+    "context": "Acme Corp is a $1.2M ARR mid-market SaaS customer approaching a 90-day renewal window (exp. ~July 2026). The account shows high usage growth but significant executive-level friction and support breaches.",
+    "headline": "High-Stakes Renewal: Defensive Alignment Against Pricing Pressure and Technical Dissatisfaction",
+    "participant_snapshot": "Key attendees include Elena Rodriguez (CFO, driving pricing pressure), Marcus Webb (CTO, witness to SLA breaches), and Sarah Chen (VP Data/Champion)."
+  },
+  "risks": [
+    {
+      "risk": "Metric Discrepancy & Loss of Trust",
+      "severity": "High",
+      "evidence": "Notes p.2 vs Slide 5",
+      "mitigation": "Proactively admit that while the average resolution is 18h, the recent P1s (which Marcus saw) took 48h. Do not present Slide 5 without this verbal disclaimer to avoid appearing deceptive."
+    },
+    {
+      "risk": "Pricing Re-negotiation/Downsell",
+      "severity": "High",
+      "evidence": "Notes p.1 and p.3",
+      "mitigation": "Frame the '3-year renewal' (Slide 7) as a solution to Elena's request for 'multi-year pricing flexibility' to secure the $1.2M ARR floor before she pushes for usage-based models."
+    },
+    {
+      "risk": "Vendor Displacement via Competitor X",
+      "severity": "High",
+      "evidence": "Notes p.3",
+      "mitigation": "Connect the 'H1 2026 Roadmap' (Slide 6) specifically to their expansion into EMEA and healthcare clients, making the switching cost higher than a simple pricing play by Competitor X."
+    },
+    {
+      "risk": "Unaddressed Integration Backlog",
+      "severity": "Medium",
+      "evidence": "Notes p.2",
+      "mitigation": "The Account Manager must provide a firm date for the 'Custom data export format' quote during the meeting, as this is the third time Sarah has requested it."
+    }
+  ],
+  "talking_points": [
+    {
+      "topic": "Growth Despite Headcount Contraction",
+      "angle": "Operational Efficiency",
+      "evidence": "Slide 3 and Notes p.2",
+      "why_it_lands": "Elena Rodriguez (CFO) will appreciate that MAU is up 12% even after Feb layoffs; this proves the tool provides ROI by automating work for a smaller team."
+    },
+    {
+      "topic": "Data Sovereignty for EMEA Expansion",
+      "angle": "Global Growth Enablement",
+      "evidence": "Slide 6 and Notes p.3",
+      "why_it_lands": "Marcus Webb (CTO) requires 'Multi-region data residency' to support the EMEA business unit expansion they are planning."
+    },
+    {
+      "topic": "Data Science Resource Gap",
+      "angle": "Question to ask",
+      "evidence": "Notes p.2",
+      "why_it_lands": "For Dev Patel: 'With the recent team changes, how can our roadmap for Native LLM integration (Slide 6) act as a force-multiplier for your remaining data scientists?'"
+    }
+  ],
+  "next_steps": [
+    {
+      "action": "Deliver formal quote for Custom Data Export Format",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": "Product Team approval"
+    },
+    {
+      "action": "Verify SOC 2 Type II status for healthcare client requirement",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": "Compliance Team"
+    },
+    {
+      "action": "Schedule 1:1 introduction with Dev Patel",
+      "owner": "Account Manager",
+      "deadline": "TBD in meeting",
+      "dependency": null
+    }
+  ],
+  "cover_image_prompt": "A professional corporate dashboard showing a '38% growth' line chart and a '2.4x ROI' badge, set against a background of a modern glass-walled boardroom in navy and gold tones."
+}

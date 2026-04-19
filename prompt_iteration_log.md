@@ -85,4 +85,42 @@ Role and perspective:
 
 ## V3 — Reasoning constraints and adversarial check
 
-*Pending.*
+**System prompt** (deltas over V2 only; full prompt in `prompts/v3.md`)
+
+```
+Grounding rule #3 broadened:
+"...when the Notes PDF and the slide deck contradict each other — including framing or tone mismatches, not just numeric ones — treat the contradiction itself as a High-severity risk."
+
+Deadline clause added:
+"next_steps[].deadline is either a specific date taken directly from the source documents or the string 'TBD in meeting' — never a fabricated date."
+
+Reasoning constraints (mandatory before responding):
+4. Pre-mortem: 'What would have to be true for this deal to fall through in the next 90 days?' Any supported condition → High-severity risk.
+5. Adversarial check: what would a competing vendor (e.g., Snowflake, Databricks, or a competitor referenced in the notes) argue to displace us? → risk with mitigation.
+6. Blind-spot check: identify at least one question the notes failed to ask. Surface as a talking point with angle = "Question to ask".
+```
+
+**User message (in chat).** `Prepare me for this meeting.`
+
+**Settings.** Identical to V1/V2 — Gemini 3 Flash Preview · Thinking Low · Temp 1.0 · Structured output on · All tools off. Token count: 9,501.
+
+**Diff vs V2.** V2 was grounded and counterparty-aware but reactive. V3 forces three explicit reasoning loops (pre-mortem, adversarial, blind-spot) and fixes the V2 deadline-fabrication regression.
+
+**Artifacts.** `prompts/v3.md`, `sample_outputs/v3.json`, `screens/ai_studio_v3.png`.
+
+**What it caught.**
+- Adversarial lever fired cleanly. New High-severity risk "Vendor Displacement via Competitor X" (Notes p.3) with a concrete mitigation tying Slide 6's roadmap to Acme's EMEA + healthcare expansion as a switching-cost argument. This risk did not exist in V1 or V2.
+- Blind-spot lever fired. Third talking point uses `angle: "Question to ask"` exactly as instructed — the AM asking Dev Patel about the Native LLM roadmap as a force-multiplier given the Feb layoffs.
+- Deadline fix worked. All three `next_steps[].deadline` = `"TBD in meeting"`. V2 regression closed.
+- Grounding, citations, and counterparty POV all maintained. No regression on earlier wins.
+
+**What it still missed (the ceiling).**
+- **The CTO-roadmap contradiction is still absent.** Notes p.3 is explicit that Marcus has never seen the 2026 roadmap, but Slide 6 ("Shared roadmap: building the next phase together") presents it as aligned. V3's pre-mortem lever did not flag this — arguably the single biggest landmine for the live meeting. The model's pre-mortem reasoning found competitive and pricing failure modes but not stakeholder-alignment failure modes.
+- **The growth-vs-layoffs tension was reframed, not flagged.** V3 surfaced it as a *positive* talking point ("Growth Despite Headcount Contraction" — Slide 3 + Notes p.2) rather than as a contradiction risk. Dual-source evidence format used, but severity inverted from risk to sales pitch. The broadened rule #3 ("framing/tone mismatches") didn't override the sales instinct.
+- Blind-spot check surfaced one question (the Dev Patel one) but missed richer candidates: what is the Competitor X conversation actually about, who added "+ roadmap" to the invite title, is SOC 2 Type II still required. Technically meets "at least one" but leaves yield on the table.
+
+**Why V3 found competitive landmines but not internal ones.** Hypothesis: the example list in rule #5 ("e.g., Snowflake, Databricks, or a competitor referenced in the notes") anchored the model on *external* adversaries. Rule #4's pre-mortem was more open-ended but the model appears to have treated it as "a second adversarial pass" rather than "a stakeholder-misalignment pass". Named examples teach by pattern — they also constrain by pattern.
+
+**The structural finding.** Prompt engineering on a clean schema closes evidence hygiene, role framing, and competitive framing efficiently. It partially closes contradiction detection (numeric: yes; narrative: yes; stakeholder-alignment: no). A fourth iteration with stakeholder-level pre-mortem examples would likely close the CTO-roadmap gap — but the marginal prompt instruction required to hit every such case suggests a different architecture: retrieval + targeted re-prompts over a single long system prompt. That's a reflection-section finding, not a V4 recipe.
+
+**Settings note for reflection.** All three iterations held Thinking = Low. This was deliberate — it isolates the prompt as the varying input, and V1 already showed strong baseline behavior without thinking-time compute. Running Thinking High on the V3 prompt would be a fourth experiment, not a fourth iteration.
