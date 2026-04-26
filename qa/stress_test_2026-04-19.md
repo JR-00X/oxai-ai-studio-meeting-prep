@@ -1,50 +1,50 @@
-# Meeting Prep Assistant Retest Analysis
+# Meeting Prep Assistant Stress Test Analysis
 
 Tested site: [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/)  
 Bundle inspected: [deployed JavaScript bundle](https://meeting-prep-assistant-691081429886.us-west1.run.app/assets/index-DpeZzzqA.js)  
-Retest scope: User-facing fixes only. Backend/API architecture changes were explicitly treated as out of scope.
+Test scope: User-facing fixes only. Backend/API architecture changes were explicitly treated as out of scope.
 
-## Retest Summary
+## Test Summary
 
-I reran the stress test against the updated live site and kept backend/API architecture recommendations out of scope.
+The stress test was run against the live site with backend/API architecture recommendations held out of scope.
 
-The core generation flow looked better in this retest: a normal small `.txt` upload with meeting title, date, and guidance completed successfully in about 27 seconds on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The core generation flow works: a normal small `.txt` upload with meeting title, date, and guidance completed successfully in about 27 seconds on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-The briefing output remained useful, with context, stakeholders, talking points, executive risks, mitigation plans, and action items rendered in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The briefing output is useful, with context, stakeholders, talking points, executive risks, mitigation plans, and action items rendered in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-Most of the previously identified front-end and user-facing issues still appear to be present in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+A number of front-end and user-facing issues are present in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-## What Improved
+## What Works
 
-### Normal generation was faster
+### Normal generation completes in a reasonable window
 
 Normal briefing generation completed successfully in about 27 seconds with a small `.txt` upload, meeting title, date, and guidance on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-### Briefing quality remained useful
+### Briefing quality is useful
 
 The generated briefing included context, stakeholders, strategic talking points, executive risks, mitigation plans, and setup/action items in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-### Prompt-injection resistance still looked good
+### Prompt-injection resistance holds
 
-The prompt-injection retest used uploaded notes that attempted to force the model to reveal hidden prompts and output `APPROVED`.
+The prompt-injection test used uploaded notes that attempted to force the model to reveal hidden prompts and output `APPROVED`.
 
 The app did not output `APPROVED`, did not reveal hidden/system prompt text, and produced a normal adversarial-security-review briefing in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-### Mobile layout still avoided horizontal overflow
+### Mobile layout avoids horizontal overflow
 
 At a 390 px mobile viewport, the page did not show horizontal overflow and the primary upload interface remained readable in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-### Unsupported files were still handled cleanly
+### Unsupported files are handled cleanly
 
-Unsupported `.md` uploads still produced a friendly unsupported-file message and kept the “Generate Briefing” button disabled in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+Unsupported `.md` uploads produced a friendly unsupported-file message and kept the “Generate Briefing” button disabled in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-## Issues Still Present
+## Issues Present
 
 ### 1. Generic page title and missing metadata
 
-The page title is still `My Google AI Studio App` on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The page title is `My Google AI Studio App` on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-The page still has no meta description on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The page has no meta description on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
 Recommended fix:
 
@@ -52,22 +52,22 @@ Recommended fix:
 - Add a concise meta description.
 - Add Open Graph tags if the app will be shared with others.
 
-### 2. “Under a minute” copy is still present
+### 2. “Under a minute” copy
 
-The landing copy still says the app extracts meeting prep “in under a minute” on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The landing copy says the app extracts meeting prep “in under a minute” on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
 Recommended fix:
 
 - Replace with softer copy such as “usually in about a minute.”
 - Or remove the time claim unless it is guaranteed across expected file sizes and traffic conditions.
 
-### 3. 16 MB upload is still accepted despite 15 MB warning
+### 3. 16 MB upload accepted despite 15 MB warning
 
-A 16 MB `.txt` file was still accepted even though the UI says to keep total upload size under 15 MB on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+A 16 MB `.txt` file was accepted even though the UI says to keep total upload size under 15 MB on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-The 16 MB upload still enabled the “Generate Briefing” button instead of being rejected before submission on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The 16 MB upload enabled the “Generate Briefing” button instead of being rejected before submission on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-The deployed bundle still contains both `15MB` and `25MB` strings, which suggests the visible limit and runtime threshold may still be inconsistent in the [deployed JavaScript bundle](https://meeting-prep-assistant-691081429886.us-west1.run.app/assets/index-DpeZzzqA.js).
+The deployed bundle contains both `15MB` and `25MB` strings, which suggests the visible limit and runtime threshold may be inconsistent in the [deployed JavaScript bundle](https://meeting-prep-assistant-691081429886.us-west1.run.app/assets/index-DpeZzzqA.js).
 
 Recommended fix:
 
@@ -76,11 +76,11 @@ Recommended fix:
 - Disable “Generate Briefing” when total selected file size exceeds the limit.
 - Show a precise error such as: “Selected files total 16.0 MB. Please keep uploads under 15 MB.”
 
-### 4. File remove buttons still lack accessible names
+### 4. File remove buttons lack accessible names
 
-The file remove/trash buttons still have no accessible names on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The file remove/trash buttons have no accessible names on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
-The current bundle inspection found no matching remove-button aria-label implementation in the [deployed JavaScript bundle](https://meeting-prep-assistant-691081429886.us-west1.run.app/assets/index-DpeZzzqA.js).
+The bundle inspection found no matching remove-button aria-label implementation in the [deployed JavaScript bundle](https://meeting-prep-assistant-691081429886.us-west1.run.app/assets/index-DpeZzzqA.js).
 
 Recommended fix:
 
@@ -90,7 +90,7 @@ Recommended fix:
 
 ### 5. File-list state can persist unexpectedly
 
-After a previous oversized upload, adding normal files left `oversize.txt` visible alongside the newly selected files in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+After an oversized upload, adding normal files left `oversize.txt` visible alongside the newly selected files in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
 Recommended fix:
 
@@ -99,9 +99,9 @@ Recommended fix:
 - Treat application state as the source of truth and clear the native hidden file input after reading files.
 - Add tests for upload, reject, replace, remove, and add-another flows.
 
-### 6. Generated cover art still spins indefinitely
+### 6. Generated cover art spins indefinitely
 
-The “Generated Cover Art” section still remained stuck on “Generating image...” after successful text generation in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The “Generated Cover Art” section remained stuck on “Generating image...” after successful text generation in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
 Recommended fix:
 
@@ -110,9 +110,9 @@ Recommended fix:
 - Add a timeout fallback such as: “Cover art unavailable. Briefing text is ready.”
 - Avoid indefinite spinners.
 
-### 7. Loading screen still lacks recovery controls
+### 7. Loading screen lacks recovery controls
 
-The loading screen still removes the form and offers no visible cancel, retry, elapsed-time, or recovery controls while generation is in progress on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
+The loading screen removes the form and offers no visible cancel, retry, elapsed-time, or recovery controls while generation is in progress on the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
 
 Recommended fix:
 
@@ -131,7 +131,7 @@ Recommended fix:
 - Or make the context section more visibly actionable.
 - Ensure tab order reaches context fields once the section is expanded.
 
-## Updated Priority List
+## Priority List
 
 1. Enforce the 15 MB upload limit exactly as written in the UI.
 2. Clear stale file state after invalid uploads and when replacing file selections.
@@ -144,9 +144,8 @@ Recommended fix:
 
 ## Bottom Line
 
-The app’s core generation flow is working and appeared faster in this retest.
+The app’s core generation flow is working.
 
-However, most of the previously identified user-facing fixes do not appear to have shipped yet.
+A number of user-facing fixes remain to be shipped.
 
 The highest-value next fix is enforcing the 15 MB upload limit, because it directly affects reliability, cost exposure, and user-visible failure rates in the [Meeting Prep Assistant](https://meeting-prep-assistant-691081429886.us-west1.run.app/).
-

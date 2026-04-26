@@ -10,7 +10,7 @@ Help an account manager walk into a client meeting prepared, in under a minute. 
 
 ### 1. Landing (Upload)
 
-- Single drop zone on a single page, accepting PDF and PPTX, multiple files at once.
+- Single drop zone on a single page, accepting PDF and TXT, multiple files at once.
 - Primary CTA: **"Prepare my meeting."** Disabled until both documents are attached.
 - When clicked, the CTA enters a loading state in-place — the page does not navigate away. A four-stage progress indicator shows beneath the drop zone: *Reading documents · Extracting stakeholders and facts · Checking for contradictions · Generating meeting prep*.
 - Reassurance line: "Documents are processed for this session only. Nothing is stored."

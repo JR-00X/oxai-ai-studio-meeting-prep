@@ -31,7 +31,7 @@ A production-intent Meeting Prep Assistant built on Google AI Studio (Gemini 3.1
 
 ## 2. Architecture
 
-Two user inputs → one Gem → one JSON contract → two screens. Nothing else.
+Two user inputs → one Gem → one JSON contract → two screens.
 
 ```
 ┌────────────────────────────┐
@@ -55,7 +55,7 @@ Two user inputs → one Gem → one JSON contract → two screens. Nothing else.
 └────────────────────────────┘   returns to Landing.
 ```
 
-**Repository layout** (only what the grader needs to navigate):
+**Repository layout:**
 
 ```
 .
@@ -235,7 +235,7 @@ The pattern: Stitch works when asked to branch from an existing frame and vary o
 
 ### What would you change to productionise this system?
 
-The live Cloud Run deployment was retested independently ([`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md); the Build-mode session that produced it is preserved in [`qa/ai_studio_build_log.md`](qa/ai_studio_build_log.md)). Core generation works (~27s for a small upload), prompt-injection resistance held, mobile layout passed. Eight client-side issues remain — the priority list is the productionisation roadmap. Notably, when handed the same stress test, Build-mode applied the nine lower-risk fixes in-loop and self-bounded on the architecture rewrite — the same item that tops this roadmap.
+The live Cloud Run deployment was stress-tested independently ([`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md); the Build-mode session that produced it is preserved in [`qa/ai_studio_build_log.md`](qa/ai_studio_build_log.md)). Core generation works (~27s for a small upload), prompt-injection resistance held, mobile layout passed. Eight client-side issues remain — the priority list is the productionisation roadmap. Notably, when handed the same stress test, Build-mode applied the nine lower-risk fixes in-loop and self-bounded on the architecture rewrite — the same item that tops this roadmap.
 
 Highest-value fixes are the ones that affect reliability and cost exposure: enforcing the stated 15 MB upload limit at the boundary instead of letting 16 MB files through to base64 encoding; clearing stale file state after invalid uploads; replacing the indefinite cover-art spinner with a timeout fallback; adding cancel/retry/elapsed-time controls during generation. After that come the polish and accessibility fixes — `aria-label` on icon-only remove buttons, real `<title>` and meta description, softening the "in under a minute" copy that the SLA cannot guarantee.
 
