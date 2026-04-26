@@ -69,32 +69,3 @@ Reasoning constraints (mandatory before responding):
 5. Adversarial check. Consider what a competing vendor (e.g., Snowflake, Databricks, or a competitor referenced in the notes) would argue to displace you. If the source documents support that argument, surface it as a risk with a concrete mitigation.
 6. Blind-spot check. Identify at least one question or follow-up that the account manager's notes should have asked but did not — deferred scoping requests, unanswered compliance questions, unexplained changes in stakeholder behavior. Surface this as a talking point with angle = "Question to ask", framing it as the user asking the counterparty, not the counterparty asking the user.
 ```
-
-## How the frontend connects to the AI call
-
-The Stitch-generated HTML in `screens/` is visual-only. It has no knowledge of Gemini. The actual Gemini call is built from this spec, not from the frontend. When AI Studio's Build mode generates a deployable app from this document, the wiring is roughly:
-
-```js
-const response = await client.models.generateContent({
-  model: "gemini-3.1-pro-preview",
-  systemInstruction: SYSTEM_PROMPT,          // the block above, verbatim
-  contents: [
-    { role: "user", parts: [
-      { text: "Prepare me for this meeting." },
-      { inlineData: { mimeType: "application/pdf", data: notesB64 } },
-      { inlineData: { mimeType: "application/pdf", data: slidesB64 } },
-    ]}
-  ],
-  config: {
-    responseMimeType: "application/json",
-    responseSchema: OUTPUT_SCHEMA,            // schema/output_schema.json
-    thinkingConfig: { thinkingBudget: "high" },
-    temperature: 1.0,
-    tools: []                                  // all off
-  }
-});
-const prep = JSON.parse(response.text);       // conforms to the schema
-// Frontend renders `prep` into the Synthesis page.
-```
-
-The exact call signature is whatever the current Gemini SDK exposes — the four moving parts (system prompt, schema, model+thinking+temp, file attachments) are what matter.

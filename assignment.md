@@ -18,9 +18,14 @@ A production-intent Meeting Prep Assistant built on Google AI Studio (Gemini 3.1
 
 **Headline finding.** Three prompt iterations (V1 → V2 → V3) held model, thinking level, and temperature constant so the prompt was the only varying input. A follow-up sweep varied thinking level and model on the V3 prompt. V3 on Gemini 3.1 Pro with Thinking High caught all three planted contradictions in the test inputs, including the single most consequential landmine (a CTO being blindsided by an unaligned roadmap). V3 on Flash with the same prompt and Thinking Low caught only one. The conclusion is written up in section 4 — prompt engineering reliably closes evidence hygiene, role framing, and competitive framing; model capacity matters materially for stakeholder-alignment contradictions.
 
-**Assignment brief.** [`Google_AI_Studio_Assignment_Detailed.pdf`](Google_AI_Studio_Assignment_Detailed.pdf) (Oxford edition, graded Complete / Not Complete). Cloud Run deployment is listed as optional and has been skipped.
+**Assignment brief.** [`Google_AI_Studio_Assignment_Detailed.pdf`](Google_AI_Studio_Assignment_Detailed.pdf) (Oxford edition, graded Complete / Not Complete).
 
 **Repository.** [`JR-00X/oxai-ai-studio-meeting-prep`](https://github.com/JR-00X/oxai-ai-studio-meeting-prep) on GitHub. Every artefact referenced in this document is committed to `main`.
+
+**Live deployment (optional bonus).** The app is deployed on Google Cloud Run:
+**https://meeting-prep-assistant-691081429886.us-west1.run.app**
+
+> ⚠️ **Stability notice.** The deployed app is not fully optimised — known issues are catalogued in [`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md) and addressed in section 6. Errors may occasionally appear during generation; if that happens please **retry once** (the second attempt usually completes). If the second retry also fails, please contact me at **contact@example.com**.
 
 ---
 
@@ -206,4 +211,34 @@ After the scope was locked to two screens, the broader exploration was trimmed. 
 
 ## 6. Reflection
 
-*Pending. To be written last, ≤ 800 words, covering the four questions from the brief: how the prompt evolved, the model-selection trade-offs observed in the sweep, how Stitch accelerated or constrained UX design, and what would change to productionise this system.*
+(≤ 800 words.)
+
+### How did the prompt evolve across iterations?
+
+Each iteration closed an easier class of failure and revealed a harder one. V1 was deliberately thin — generic instruction, no grounding, no role, no reasoning constraint. It still produced counterparty-oriented reasoning and severity triage, because the schema's required fields (`evidence`, `severity`, `why_it_lands`) carry prompt weight on their own. The first finding was structural: structured-output prompting is a two-surface problem — the instruction *and* the schema both teach the model what to do.
+
+V2 added grounding rules (citation format, contradictions as first-class risks), counterparty-POV framing, and owner specificity. It closed citation hygiene cleanly (7/7 evidence fields correctly formatted, all locators correct) and shifted talking points to named-stakeholder framing. But it also caught only one of three planted contradictions, surfaced the CTO-roadmap landmine *as a talking point to present to the CTO* (the inverse of what was needed), and introduced a deadline-fabrication regression — three invented dates appearing where the source had none.
+
+V3 stacked three reasoning constraints: a pre-mortem ("what would have to be true for this deal to fall through?"), an adversarial check, and a blind-spot check that routed unasked questions into talking points with a dedicated angle. Plus an explicit `"TBD in meeting"` fallback to close the V2 deadline regression. The adversarial and blind-spot levers fired cleanly. The pre-mortem partially fired — the CTO-roadmap contradiction stayed missed, and the growth-vs-layoffs tension was reframed as a *positive* talking point rather than a risk. The pattern: prompt levers reliably close pattern-matchable behaviour (formats, framings, presence-of-X) and unreliably close cross-document narrative inference.
+
+### What model-selection trade-offs did you observe?
+
+The Flash-vs-Pro sweep on the V3 prompt produced the assignment's clearest finding. Flash with Thinking Low caught one of three contradictions; Flash with Thinking High caught two (including the CTO-roadmap landmine, but at Medium severity with a soft mitigation); Pro with Thinking High caught all three at the right severity, with multi-step mitigations, and reasoned about causal connections across pages — linking the Competitor X threat to the repeatedly-deferred integration ask, where Flash treated those as separate risks. Pro also reframed the growth-vs-layoffs tension as a *clarification* question (epistemic, asking what the metric actually measures) rather than a sales pitch.
+
+Pro carries roughly 54% token overhead over Flash-High on the same task. For a single high-stakes meeting prep, that overhead is trivially justified. For batch use cases the trade-off looks less favourable, and the natural production answer is a routed architecture — Flash by default, Pro on flagged deals — not Pro everywhere.
+
+A second, quieter finding from the sweep: branched chats leak context into experiments meant to be clean. The 9,501 → 6,478 token delta on an identical V3 prompt is consistent with the V1 + V2 turns being carried in the V3-Low context. For any model-behaviour comparison hinging on a single varying input, fresh chats are the more defensible protocol.
+
+### How did Stitch accelerate or constrain UX design?
+
+Three approaches were tried, in order. Three focused per-screen briefs anchored the visual system cleanly. A single comprehensive brief covering nine screens — legible to a human reviewer — produced incoherent outputs in practice; screens drifted aesthetically despite shared design tokens. The third approach, Stitch's *"imagine a new screen"* feature applied to a button inside an existing canvas, produced the strongest outputs because the source-screen context (sidebar, palette, typography, chrome) was carried forward automatically.
+
+The pattern: Stitch works when asked to branch from an existing frame and vary one thing — much as a human designer does. A single comprehensive brief appears to exceed Stitch's single-generation working memory. The acceleration is real (nine polished screens in a session, where the same in Figma would have taken days). The constraint is that multi-screen coherence is earned through provenance, not described upfront.
+
+### What would you change to productionise this system?
+
+The live Cloud Run deployment was retested independently ([`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md)). Core generation works (~27s for a small upload), prompt-injection resistance held, mobile layout passed. Eight client-side issues remain — the priority list is the productionisation roadmap.
+
+Highest-value fixes are the ones that affect reliability and cost exposure: enforcing the stated 15 MB upload limit at the boundary instead of letting 16 MB files through to base64 encoding; clearing stale file state after invalid uploads; replacing the indefinite cover-art spinner with a timeout fallback; adding cancel/retry/elapsed-time controls during generation. After that come the polish and accessibility fixes — `aria-label` on icon-only remove buttons, real `<title>` and meta description, softening the "in under a minute" copy that the SLA cannot guarantee.
+
+Architecturally, two changes follow from the prompt-engineering work: a routed model (Flash by default, Pro on flagged deals) instead of one model for all calls, and explicit contradiction-class handling at the prompt layer with stakeholder-alignment examples, since the V3 sweep showed that without them the model treats the pre-mortem as a second adversarial pass.
