@@ -2,7 +2,7 @@
 
 Unedited transcript of the Google AI Studio Build-mode session that produced the deployed Cloud Run app at https://meeting-prep-assistant-691081429886.us-west1.run.app/.
 
-Companion to [`stress_test_2026-04-19.md`](stress_test_2026-04-19.md): the stress test reports the issues, this log shows which were fixed in-loop, which required approval, and how Build-mode handled the iteration.
+Companion to [`stress_test_2026-04-26.md`](stress_test_2026-04-26.md): the stress test reports the issues, this log shows which were fixed in-loop, which required approval, and how Build-mode handled the iteration.
 
 ## What to extract from this log
 
@@ -142,7 +142,7 @@ The user provided this single comprehensive input to Build-mode. The conversatio
 >
 > I have just force-restarted the internal development server and wiped its cache. Try generating once more.
 
-**User:** [Pasted the full stress test analysis — same content as `stress_test_2026-04-19.md` first version — and asked Build-mode to apply fixes that won't possibly break the app, ask for approval on risky ones, and switch image generation to "nano banana 2".]
+**User:** [Pasted an earlier round of the stress test analysis — same scope and category breakdown as the current `stress_test_2026-04-26.md` report, before this round of fixes — and asked Build-mode to apply fixes that won't possibly break the app, ask for approval on risky ones, and switch image generation to "nano banana 2".]
 
 **Gemini 3.1 Pro Preview — Ran for 583,859s** (~6.7 days reported elapsed — likely a job-state artifact rather than literal compute time)
 
