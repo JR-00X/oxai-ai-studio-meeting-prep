@@ -144,7 +144,7 @@ Three levers stacked on the thin baseline:
 2. Contradictions promoted to first-class risks with dual-source evidence format (`Notes p.2 vs Slide 4`).
 3. Counterparty POV for `why_it_lands`, named stakeholders, no "we" framing.
 
-**Result.** 7/7 evidence fields correctly formatted with no hallucinated locators. 3/3 `why_it_lands` fields from counterparty POV with named stakeholders. One contradiction (SLA 48h vs 18h) promoted to High risk with dual-source evidence. But two of three contradictions still missed — including the CTO-roadmap tension, which V2 actually surfaced *as a talking point to present to Marcus*, reading as a landmine tee-up rather than a defusal. V2 also introduced a deadline-fabrication regression (three invented dates).
+**Result.** 7/7 evidence fields correctly formatted with no hallucinated locators. 3/3 `why_it_lands` fields from counterparty POV with named stakeholders. One contradiction (SLA 48h vs 18h) promoted to High risk with dual-source evidence. But two of three contradictions still missed — including the CTO-roadmap tension, which V2 surfaced *as a talking point to present to Marcus*, reading as a landmine tee-up rather than a defusal. V2 also introduced a deadline-fabrication regression (three invented dates).
 
 ### V3 — Reasoning constraints and adversarial check
 
@@ -203,15 +203,13 @@ Three approaches were attempted, in order, each building on what the previous on
 2. **One comprehensive one-shot brief covering all nine screens** (the broader product surface, pre-scope-lock) — failed. Screens drifted aesthetically despite shared design tokens, and information density dropped. Not the right abstraction for Stitch's current workflow.
 3. **"Imagine a new screen" from the Results canvas** — Stitch's feature for branching from an existing screen. Selecting a button inside the Results screen and asking it to imagine the target screen produced the strongest outputs of the three approaches, because the source-screen context (sidebar, color tokens, typography, chrome) is carried forward automatically.
 
-The pattern: Stitch works best when asked to branch from an existing frame and vary one thing, which mirrors how a human designer actually works. A single comprehensive brief is legible to a human reviewer but appears to exceed Stitch's single-generation working memory. This is reflection material (section 6).
+The pattern: Stitch works best when asked to branch from an existing frame and vary one thing, which mirrors how a human designer actually works. A single comprehensive brief is legible to a human reviewer but appears to exceed Stitch's single-generation working memory.
 
-After the scope was locked to two screens, the broader exploration was trimmed. The full set (nine Stitch outputs plus variants) is preserved in git history at commit `c4d9dda` for anyone inspecting the UX workflow evidence behind the reflection.
+After the scope was locked to two screens, the broader exploration was trimmed. The full set (nine Stitch outputs plus variants) is preserved in git history at commit `c4d9dda`.
 
 ---
 
 ## 6. Reflection
-
-(≤ 800 words.)
 
 ### How did the prompt evolve across iterations?
 
@@ -223,7 +221,7 @@ V3 stacked three reasoning constraints: a pre-mortem ("what would have to be tru
 
 ### What model-selection trade-offs did you observe?
 
-The Flash-vs-Pro sweep on the V3 prompt produced the assignment's clearest finding. Flash with Thinking Low caught one of three contradictions; Flash with Thinking High caught two (including the CTO-roadmap landmine, but at Medium severity with a soft mitigation); Pro with Thinking High caught all three at the right severity, with multi-step mitigations, and reasoned about causal connections across pages — linking the Competitor X threat to the repeatedly-deferred integration ask, where Flash treated those as separate risks. Pro also reframed the growth-vs-layoffs tension as a *clarification* question (epistemic, asking what the metric actually measures) rather than a sales pitch.
+The Flash-vs-Pro sweep on the V3 prompt produced the assignment's clearest finding. Flash with Thinking Low caught one of three contradictions; Flash with Thinking High caught two (including the CTO-roadmap landmine, but at Medium severity with a soft mitigation); Pro with Thinking High caught all three at the right severity, with multi-step mitigations, and reasoned about causal connections across pages — linking the Competitor X threat to the repeatedly-deferred integration ask, where Flash treated those as separate risks. Pro also reframed the growth-vs-layoffs tension as a *clarification* question (asking what the metric actually measures) rather than a sales pitch.
 
 Pro carries roughly 54% token overhead over Flash-High on the same task. For a single high-stakes meeting prep, that overhead is trivially justified. For batch use cases the trade-off looks less favourable, and the natural production answer is a routed architecture — Flash by default, Pro on flagged deals — not Pro everywhere.
 

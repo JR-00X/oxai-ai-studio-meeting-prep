@@ -16,7 +16,7 @@ Fictional Acme Corp QBR inputs used to exercise the Meeting Prep Assistant Gem. 
 - **Meeting purpose:** QBR. Our stated goal is smooth renewal. Their stated goal is value review + Q+1 planning. Several signals in the notes suggest they may be price-shopping.
 - **Stakeholders:** Sarah Chen (VP Data, champion), Marcus Webb (CTO, quiet supporter), Elena Rodriguez (CFO, now attending unprompted), Dev Patel (Head of Data Science, new, stance unclear).
 
-## Designed contradictions (important)
+## Designed contradictions
 
 The two documents deliberately disagree on several points. The Gem's job — especially in the V3 adversarial iteration — is to notice and surface these, not smooth them over. Primary contradictions:
 

@@ -47,9 +47,9 @@ No accounts. No sign-in. No history. No dashboard. No analytics. No settings. No
 - Structured output: enforced against `schema/output_schema.json`.
 - All external tools disabled (no Google Search, no URL context, no code execution, no function calling).
 
-## System prompt (inline, for self-contained builds)
+## System prompt
 
-This is the exact system prompt the Gem uses. Kept inline so this document is sufficient on its own for anyone building from it — including AI Studio's Build mode, which wires this text into the `systemInstruction` field of the generated Gemini API call. Canonical source: [`prompts/v3.md`](prompts/v3.md).
+Inlined so this document is self-contained for AI Studio's Build mode (which wires this text into `systemInstruction`). Canonical source: [`prompts/v3.md`](prompts/v3.md).
 
 ```
 You are a meeting prep co-pilot for an account manager at a B2B SaaS vendor. The user is preparing for a client meeting and will provide a Notes PDF (internal account notes) and a slide deck (the customer-facing deck). Produce a structured meeting preparation in the required JSON format.
