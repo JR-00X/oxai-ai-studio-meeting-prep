@@ -25,7 +25,7 @@ A production-intent Meeting Prep Assistant built on Google AI Studio (Gemini 3.1
 **Live deployment (optional bonus).** The app is deployed on Google Cloud Run:
 **https://meeting-prep-assistant-691081429886.us-west1.run.app**
 
-> ⚠️ **Stability notice.** The deployed app is not fully optimised — known issues are catalogued in [`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md) and addressed in section 6. Errors may occasionally appear during generation; if that happens please **retry once** (the second attempt usually completes). If the second retry also fails, please contact me at **contact@example.com**.
+> ⚠️ **Stability notice.** The deployed app is not fully optimised — known issues are catalogued in [`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md) and addressed in section 6. Errors may occasionally appear during generation; if that happens please **retry once** (the second attempt usually completes). If the second retry also fails, please [open an issue on GitHub](https://github.com/JR-00X/oxai-ai-studio-meeting-prep/issues/new?title=Cloud+Run+deployment+issue).
 
 ---
 

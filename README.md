@@ -10,7 +10,7 @@ A working build is deployed on Google Cloud Run:
 
 **https://meeting-prep-assistant-691081429886.us-west1.run.app**
 
-> ⚠️ **Stability notice.** The deployed app is not fully optimised. Errors may occasionally appear during generation — if that happens, please **retry once**; the second attempt usually completes. If the second retry also fails, please contact me at **contact@example.com** so I can take a look. Known issues are catalogued in [`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md) and addressed in the productionisation section of [`assignment.md`](assignment.md).
+> ⚠️ **Stability notice.** The deployed app is not fully optimised. Errors may occasionally appear during generation — if that happens, please **retry once**; the second attempt usually completes. If the second retry also fails, please [**open an issue on GitHub**](https://github.com/JR-00X/oxai-ai-studio-meeting-prep/issues/new?title=Cloud+Run+deployment+issue) — a one-line note about what you tried and any error message helps. Known issues are catalogued in [`qa/stress_test_2026-04-19.md`](qa/stress_test_2026-04-19.md) and addressed in the productionisation section of [`assignment.md`](assignment.md).
 
 ## Documents
 
